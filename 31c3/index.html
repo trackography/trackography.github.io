@@ -3,8 +3,8 @@
 <head>
         <meta charset="utf-8">
         <title>31c3 - Trackography - you never read alone</title>
-        <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-        <link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="../nm/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="../nm/reveal.js/css/theme/default.css" id="theme">
 
         <style>
             .authors {
@@ -70,21 +70,33 @@
 
             <section>
                 <h2>
-                    --- This is where we present TRACKOGRAPHY
+                    Why we do that ? what questions we have ?
                 </h2>
+                <ul>
+                    <li>Is online tracking be considered like a feedback of the complex sysyem of the society ?</li>
+                    <li>Is the online new media business exposing user to foreing state attacks ?</li>
+                    <li>If this business is moving state and corporation, can we collect independently some numbers?</li>
+                </ul>
             </section>
 
             <section>
-                <h2>What we do</h2>
-                <h3>exactly the same thing happening in a browser</h3>
-                --- Technical decision -> running a browser, running traceroute, centralize the data, keep historyical tracks.
+                <h2>Technicalities - What we do</h2>
+                <h4>exactly the same thing happening in a browser</h4>
+                <p>Having a list of media for every state of the world, in every state:<p>
+                <ul>
+                    <li>Run phantojs to the media, monitor all the third party connection performed.</li>
+                    <li>Traceroute + GeoIP for every included.</li>
+                    <li>the results are send to our infrastrucutre, and exposed via a Rest API</li>
+                    <li>historical collection of the results, integration with third party data (disconnect.me)</li>
+                </ul>
             </section>
 
             <section>
                 <section>
-                    <h2>
-                        --- Defining the subject of analysis = Media website.
-                    </h2>
+                    <h2>why the Media website.</h2>
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
                 </section>
 
                 <section>
@@ -111,6 +123,14 @@
                     what does it mean!
                 </section>
 
+            </section>
+
+            <section>
+                <h2>How "users exposition" can be measured ?</h2>
+                <ul>
+                    <li>Any unecrypted connection passing through a foreing owned infrastructure, can be abused without the user has its right (he's not a citizen of the attacking country), this is way we use traceroute.</li>
+                    <li>Any data collected by a third party has a certain degree of rights, declaration and duty. Making machine readable those information</li>
+                </ul>
             </section>
 
             <section>
@@ -219,8 +239,8 @@
         </div>
     </div>
 
-    <script src="../reveal.js/lib/js/head.min.js"></script>
-    <script src="../reveal.js/js/reveal.min.js"></script>
+    <script src="../nm/reveal.js/lib/js/head.min.js"></script>
+    <script src="../nm/reveal.js/js/reveal.min.js"></script>
 
     <script>
             // Required, even if empty.
