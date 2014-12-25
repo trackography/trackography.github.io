@@ -17,6 +17,10 @@
                 clear: both;
                 padding: 3px;
             }
+            #solutiontable {
+                font-size: 0.6em;
+                font-family: Consolas, courier;
+            }
         </style>
 </head>
 
@@ -42,11 +46,15 @@
                     </span>
                 </div>
                 <div class="authorscointainer">
-                    <p>A Tactical Tech project</p>
+                    <br>
+                    <p style="font-weight: bolder; color: #efef8f">A Tactical Tech project</p>
+                    <br>
                 </div>
                 <div class="authorscointainer">
                     <p>31st Chaos Communication Congress (31c3), 29th December 2014</p>
                 </div>
+                <br><br>
+                <small>press ESC to display slide tree</small>
 
             </section>
 
@@ -182,14 +190,23 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
                 <p>
                     Based on all the data collected, we've some numbers
                 </p>
-                TODO - link or screenshot about percentage of exposure.
+                <h3>This is what we call geopoliticis of data</h3>
             </section>
 
             <section>
-                <h2>
+                <small>now we'll see some hot political situation, but before, some requirement</small>
+                <h4>
                     Connection to Media (blue), connection to third party (red)
-                </h2>
-                TODO - link germany with a national and a foreign selected.
+                </h4>
+                <small>
+                    TODO - link germany with a national and a foreign selected.
+                </small>
+                <h4>
+                    Violet country (network infrastructure) and Red country (connection ends = data stored)
+                </h4>
+                <small>
+                    harm of intelligence agencies potentially exploiting network infrastructure
+                </small>
             </section>
 
             <section>
@@ -200,73 +217,207 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
             </section>
 
             <section>
-                <h2>
-                    D --- Point out different laws and treatment for foreign citizens
-                </h2>
+                <h2>"Foreing investment" for infrastructure</h2>
+                TODO - Brasil
             </section>
 
             <section>
-                <h2>
-                    E --- And the network infrastructure (violet country) harm of intelligence agencies potentially exploiting network infrastructure
-                </h2>
+                <h2>Interesting relationship 1</h2>
+                <p>Ukraine Russia</p>
+                <small>TODO link</small>
             </section>
 
             <section>
-                <h2>
-                    F --- And explain how the politics of data is involved here (mention some highlights ):
-                </h2>
-                <ul>
-                    <li>
-                        *Ukraine, Brasil
-                    </li>
-                    <li>
-                        *Palestine - Israel, Pakistan - India
-                    </li>
-                </ul>
+                <h2>Interesting relationship 2</h2>
+                <p>Israel Palestine</p>
+                <small>TODO link</small>
             </section>
 
+            <section>
+                <h2>Interesting relationship 2</h2>
+                <p>Israel Palestine</p>
+                <small>TODO link</small>
+            </section>
+
+            <section>
+                <section>
+                    <h2>The most invasive media ?</h2>
+                </section>
+                <section>
+                    <h2>Not so easy to say!</h2>
+                    <p>They change in time, but most important, change depending on the source!</p>
+                    TODO link to heatmap.
+                </section>
+            </section>
+
+            <section>
+                <p>
+                    Trackography API
+                </p>
+                <img src="../images/APIflow.png" />
+                <p>
+                    URL
+                </p>
+            </section>
 
             <section>
 
                 <section>
-                    <h2>Talk about the trackers: who they are, what they do, privacy policies, etc.</h2>
+                    <h2>
+                        The trackers
+                    </h2>
+                    <p>
+                        Third party trackers (a.k.a tracking companies) engage in (one or more of) the following:
+                    </p>
+                    <ul>
+                        <li>Advertising</li>
+                        <li>Profiling </li>
+                        <li>Market Research </li>
+                        <li>Web Analytics </li>
+                        <li>Web Crawling </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>But how do the Trackers handle our data?</h2>
+                    <p>
+                        We collected the following fields of data from the privacy policies of some of the globally prevailing tracking companies:
+                    </p>
+
+                    <ul>
+                        <li>
+                            The types of data they collect (well, sometime is clear, sometime is implicit, sometime we can't say. can be assumed the worst). <br>
+                            TODO: define what does we mean (for example: list some types)
+                        </li>
+                        <li>
+                            Whether they provide safeguards to prevent the full identification of users' IP addresses (Yes, No, Not Available)
+                        </li>
+                        <li>
+                            Whether users can opt-out from their tracking (Yes, No, Not Available, but imply a new cookie)
+                        </li>
+                        <li>
+                            Whether they support Do Not Track (DNT) (spoiler: a lots don't do)
+                        </li>
+                        <li>
+                            The types of tracking technologies they use (local storage ? flash cookies ? cookies ? hardware fingerprint ?)
+                        </li>
+                        <li>
+                            Whether they comply with the US – EU Safe Harbour Framework
+                        </li>
+                        <li>
+                            Whether they are TRUSTe certified
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h3>on 26 companies imported</h3>
+                    <ul>
+                        <li>
+                            22 out of 25 globally prevailing tracking companies are based in the U.S.
+                        </li>
+                        <li>
+                            19 out of 25 globally prevailing tracking companies state that they collect personally identifiable information
+                        </li>
+                        <li>
+                            Only 3 out of 25 globally prevailing tracking companies support Do Not track (DNT)
+                        </li>
+                        <li>
+                            and only 11 out of 25 globally prevailing tracking companies disclose how long they retain data for...
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>Opt-Out ?</h2>
+                    <p>
+                        Largely conditional because in some cases:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Users can only opt-out if their browser is not configured to block third party cookies
+                        </li>
+                        <li>
+                            Users can only opt-out by cancelling their account with a service
+                        </li>
+                        <li>
+                            Users need to opt-out from every device that they use
+                        </li>
+                        <li>
+                            Users can only opt-out from the browser that they are using
+                        </li>
+                        <li>
+                            If users opt-out they will have restricted access to content, features and services
+                        </li>
+                        <li>
+                            ...and lets not forget the various default online tracking settings browsers have...
+                        </li>
+                    </ul>
+
                 </section>
 
                 <section>
                     <h2>
-                        --- Talk about github CSV of companies and how make them machine readable --- why did we find this important to include?  ( TODO I can prepare a simple visualisation)
+                        privacy policies issues
                     </h2>
+
+                    <p>
+                        opt-out is illusional
+                    </p>
+                    <p>
+                        data retention issue
+                    </p>
+                    <p>
+                        safeharbour framework fluff
+                    </p>
+                    <p>
+                        they are INADEQUATE to safeguard individuals
+                    </p>
+                    <p>
+                        But we are still looking at this because it would be interesting to look at what they do and how they say they protect our data, and to COMPARE
+                    </p>
                 </section>
 
                 <section>
+                    <small>Another TacticalTech project:</small>
                     <h2>
-                        --- Talk about the problems with regards to privacy policies:
+                        written in the smallprints
                     </h2>
-                    - opt-out is illusional
-                    - data retention issue
-                    - safeharbour framework fluff
-
+                    TODO => found the proper link
                 </section>
 
-                <section>
-                    <h2>
-                        - How privacy policies are INADEQUATE to safeguard individuals
-                    </h2>
-                    -- But we are still looking at this because it would be interesting to look at what they do and how they say they protect our data, and to COMPARE
-                </section>
+            </section>
+
+            <section>
 
                 <section>
                     <h2>
-                        -- select two example from "written in the smallprints" visualisation, to make clear.
+                        makes the privacy policies (and T.o.S.) machine readable
                     </h2>
+                    <ul>
+                        <li>P.P. are complex and long, nobody bother to read them</li>
+                        <li>P.P. and T.o.S. changes in time</li>
+                        <li>Beside what is declared, something is implicit (laws, customer, services) or not mentioned (stock price, reference currency)</li>
+                    </ul>
+                    <p>We are storing those data in a CSV (and we need support about it, is one operation that cannot scale technically so has to scale socially)</p>
+                    <small>(we credit every effort!)</small>
                 </section>
+
+                <section>
+                    <h2>TODO</h2>
+                    show CSV, show REST
+                </section>
+
             </section>
 
 
             <section>
              <h1>Solutions</h1>
 
-              <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+              <table border="2" cellpadding="1" cellspacing="1" id="solutiontable">
                 <tbody>
                   <tr>
                     <td>Types of tools</td>
@@ -310,8 +461,14 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
 
             <section>
                 <h1>
-                    6. Talk about OpenAPI -- and about how people can collaborate with us / open call for collaboration
+                    Thanks!
                 </h1>
+                <p>
+                    <a href="https://twitter.com/trackography_">@trackography_</a>. Automatical update every received test.
+                </p>
+                <p>
+                    myshadow link
+                </p>
 
             </section>
 
