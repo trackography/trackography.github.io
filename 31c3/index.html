@@ -72,12 +72,12 @@
 
             <section>
                 <h2>
-                    What we want known:
+                    Why did we develop Trackography?
                 </h2>
                 <ul>
-                    <li>Is online tracking be considered like a feedback of the complex sysyem of the society ?</li>
-                    <li>Is the online new media business exposing user to foreing state attacks ?</li>
-                    <li>If this business is moving state and corporation, can we collect independently some numbers?</li>
+                    <li>We are interested in the online tracking business because it is pretty opaque</li>
+                    <li>We have seen through the Snowden revelations that tracking companies have gotten exploited by intelligence agencies</li>
+                    <li>We do not control the profiles created about us by the online tracking business - which can lead to abuse</li>
                 </ul>
             </section>
 
@@ -85,25 +85,25 @@
             <section>
 
                 <section>
-                    <h2>why the online media</h2>
+                    <h2>Why are we focusing on media websites? </h2>
                     <ul>
-                        <li>In every country, some national media are between the most accessed website (Alexa)</li>
-                        <li>Beside few notable experiment, their business model is based on advertising</li>
-                        <li>Read news and be update is a citizenship duty</li>
-                        <li>What you read disclose in the long term: what you (like|know|hope|do)</li>
-                        <li>Influence actively what you read influence your mood and your knowledge</li>
+                        <li>One of the most common things we do is read the news online</li>
+                        <li>The business model of the media is largely dependent on advertising</li>
+                        <li>The type of news we read show more about us in the long-term than what we think</li>
+                        <li>The Facebook experiment shows that what we read influences our behaviour</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>So, we need a media list</h2>
+                    <h2>What do we mean by 'media'?</h2>
                     <p>
-                        Because media read in Germany are different from media read in Pakistan, and is pointless use resources of a German supporter to check how Pakistan media track they, or how they are connected to Pakistan network.
+                       We mean websites which cover the news, are of public interest and which are regularly updated </p> 
+<p> Every country has its own media websites which are visited by its citizens from that specific country
                     </p>
                     <p>
-                        For every country supported, we've a list with four section: national (read by all the nation), local (context specific), blog, and global (a list of media accessed by all the world, tested from every location)
+                        We compiled lists of media websites for each country we examined and distinguished between global (e.g. theguardian.co.uk), national (covers the entire nation), regional (covers a region) media websites and blogs
                     </p>
-                    <small>this require local knowledge</small>
+                    <small>The creation of such media lists requires local knowledge - which is why need you to collaborate with us</small>
                 </section>
 
                 <section>
@@ -116,10 +116,13 @@ curl 213.108.108.94:8000/countries
                     </pre>
                     <small>30 collected countries</small>
                     <pre>
+Number of countries we have media lists for: 40
 github.com/vecna/trackmap/verified_media$ ls | wc -l
 40
+Number of media websites: 3,242
 github.com/vecna/trackmap/verified_media$ grep http * | wc -l
 3242
+Number of media included in every test: 54
 github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
 54
                     </pre>
@@ -128,19 +131,11 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
             </section>
 
             <section>
-                <h2>Technicalities - What we do</h2>
-                <h4>exactly the same thing happening in a browser</h4>
-                <p>Having a list of media for every state of the world, in every state:<p>
-                <ul>
-                    <li>Run phantojs to the media, monitor all the third party connection performed.</li>
-                    <li>Traceroute + GeoIP for every included.</li>
-                    <li>the results are send to our infrastrucutre, and exposed via a Rest API</li>
-                    <li>historical collection of the results, integration with third party data (disconnect.me)</li>
-                </ul>
+              todo - slide 4
             </section>
 
             <section>
-                <h2>everyone can help</h2>
+                <h2></h2>
                 <ul>
                     <li>media list: a pull request is enough, <a href="https://github.com/vecna/trackmap">(git repo)</a>.</li>
                     <li>test results: follow the readme, start the script declaring your country, the results are automatically submitted to our server.</li>
@@ -149,10 +144,9 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
 
 
             <section>
-                <h2>How "users exposition" can be measured ?</h2>
+                <h2>User vulnerability: network topology</h2>
                 <ul>
-                    <li>Any unecrypted connection passing through a foreing owned infrastructure, can be abused without the user has its right (he's not a citizen of the attacking country), this is way we use traceroute.</li>
-                    <li>Any data collected by a third party has a certain degree of rights, declaration and duty. Making machine readable those information</li>
+                    <li>When we access media websites, our connections travel through the network infrastructure of foreign states </li>
                 </ul>
             </section>
 
@@ -160,10 +154,11 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
 
                 <section>
                     <h2>
-                        A single project, many meanings
+                        User vulnerability: profiling
                     </h2>
-                    <h4>remember that network topology always matter...</h4>
-                    <small>passive traffic analysis, full traffic collection, lever for targeted attacks, selective DoS</small>
+                    <h4>                    <li>when we access media websites, third parties track us and create profiles about us</li>
+</h4>
+                    <small></small>
                 </section>
 
                 <section>
@@ -183,7 +178,7 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
             </section>
 
             <section>
-                <h2>Assess the exposition</h2>
+                <h2>How your data travels</h2>
                 <p>
                     Is enough that one connection pass though an adversary country, to permit an HTTP Referer analysis (and dependently of the HTTP content, browser profiling or cookies).
                 </p>
