@@ -60,7 +60,7 @@
 
             <section>
                 <section>
-                    <h2>Tracking Business</h2>
+                    <h2>Online tracking</h2>
                     <blockquote>
                         “When governments collect data we call it <b>surveillance</b>, but when companies do the same, we mistakenly call it user <b>services</b>”
                     </blockquote>
@@ -76,10 +76,26 @@
                 </h2>
                 <ul>
                     <li>We are interested in the online tracking business because it is pretty opaque</li>
-                    <li>We have seen through the Snowden revelations that tracking companies have gotten exploited by intelligence agencies</li>
-                    <li>We do not control the profiles created about us by the online tracking business - which can lead to abuse</li>
+                    <li>We have seen through the Snowden revelations that intelligence agencies have tapped into the data collected by tracking companies</li>
+                    <li>We do not control the profiles created about us by online tracking companies - which can lead to abuse</li>
                 </ul>
             </section>
+
+   <section>
+
+                    <p>What does Trackography show when we select media websites?</p>
+                    <ul>
+                        <li> The blue countries host the servers of the media websites you have selected</li>
+                        <li> The purple countries host the network infrastructure required to access the media websites you have selected</li>
+                        <li> The red countries host the servers of the companies that track you when you access the media websites you have selected</li>
+                    </ul>
+                    <p>As for the arcs?</p>
+                    <ul>
+                        <li> The blue arcs show your connection to the media websites you have selected</li>
+                        <li>...while the red arcs show your connection to tracking companies</li>
+                    </ul>
+
+                </section>
 
 
             <section>
@@ -90,7 +106,7 @@
                         <li>One of the most common things we do is read the news online</li>
                         <li>The business model of the media is largely dependent on advertising</li>
                         <li>The type of news we read show more about us in the long-term than what we think</li>
-                        <li>The Facebook experiment shows that what we read influences our behaviour</li>
+                        <li>A Facebook experiment shows that what we read influences our behaviour</li>
                     </ul>
                 </section>
 
@@ -98,47 +114,13 @@
                     <h2>What do we mean by 'media'?</h2>
                     <p>
                        We mean websites which cover the news, are of public interest and which are regularly updated </p> 
-<p> Every country has its own media websites which are visited by its citizens from that specific country
+<p> Every country has its own media websites which are visited by individuals from that specific country
                     </p>
                     <p>
                         We compiled lists of media websites for each country we examined and distinguished between global (e.g. theguardian.co.uk), national (covers the entire nation), regional (covers a region) media websites and blogs
                     </p>
-                    <small>The creation of such media lists requires local knowledge - which is why need you to collaborate with us</small>
+                    <small>The creation of such media lists requires local knowledge - which is why we need you to collaborate with us!</small>
                 </section>
-
-            </section>
-
-            <section>
-                <h2>
-                    Current numbers
-                </h2>
-                <pre>
-curl 213.108.108.94:8000/countries
-["CAN", "SAU", "CHE", "AUS", "GBR", "IDN", "NGA", "GRC", "IND", "PHL", "IRL", "UKR", "BRA", "ISR", "ITA", "SYR", "GTM", "DEU", "MEX", "PSE", "KEN", "HRV", "ZAF", "ESP", "PAK", "KHM", "THA", "RUS", "URY", "SWE"]
-                </pre>
-                <small>30 collected countries</small>
-                <p>
-                    Number of countries we have media lists for: <b>40</b>
-                </p>
-                <pre>
-github.com/vecna/trackmap/verified_media$ ls | wc -l
-40
-                </pre>
-                <p>
-                    Number of media websites: <b>3,242</b>
-                </p>
-                <pre>
-github.com/vecna/trackmap/verified_media$ grep http * | wc -l
-3242
-                </pre>
-                <p>
-                Number of media included in every test: <b>54</b>
-                </p>
-                <pre>
-github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
-54
-                </pre>
-            </section>
 
             <section>
                 <h3>
@@ -164,7 +146,39 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
 
             </section>
 
+            <section>
+                <h2>
+                    Data collected so far
+                </h2>
+                <pre>
+curl 213.108.108.94:8000/countries
+["CAN", "SAU", "CHE", "AUS", "GBR", "IDN", "NGA", "GRC", "IND", "PHL", "IRL", "UKR", "BRA", "ISR", "ITA", "SYR", "GTM", "DEU", "MEX", "PSE", "KEN", "HRV", "ZAF", "ESP", "PAK", "KHM", "THA", "RUS", "URY", "SWE"]
+                </pre>
+                <small>30 countries</small>
+                <p>
+                    Number of countries we have media lists for: <b>40</b>
+                </p>
+                <pre>
+github.com/vecna/trackmap/verified_media$ ls | wc -l
+40
+                </pre>
+                <p>
+                    Number of media websites: <b>3,242</b>
+                </p>
+                <pre>
+github.com/vecna/trackmap/verified_media$ grep http * | wc -l
+3242
+                </pre>
+                <p>
+                Number of media included in every test: <b>54</b>
+                </p>
+                <pre>
+github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
+54
+                </pre>
+            </section>
 
+           
             <section>
                 <h2>User vulnerability: network topology</h2>
                 <ul>
@@ -173,60 +187,7 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
                 </ul>
             </section>
 
-            <section>
-                <h2>Tapping fibre-optic cables</h2>
-                <img src="../images/partner-eyes.png" width="680" />
-                <small>
-                    And check Ingrid Burrington <a href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>.
-                </small>
-            </section>
-
-            <section>
-                <h4>Do you remember FoxAcid ?</h4>
-                <img src="../images/FoxAcid.png" width="600"/>
-                <h4>Or FinFly ISP?</h4>
-                <p>They are based on <b>intercepted HTTP connections</b> which are redirected to other servers, injecting a browser exploit or tampering a download on-the-fly.</p>
-            </section>
-
-            <section>
-                <h2>
-                    User vulnerability: profiling
-                </h2>
-                <p>when we access media websites, third parties track us and create profiles about us</p>
-            </section>
-
-            <section>
-
-                <section>
-                    <img src="../images/manylinks.png" />
-                </section>
-
-                <section>
-
-                    <p>What does Trackography show when we select media websites?</p>
-                    <ul>
-                        <li> The blue countries host the servers of the media websites you have selected</li>
-                        <li> The purple countries host the network infrastructure required to access the media websites you have selected</li>
-                        <li> The red countries host the servers of the companies that track you when you access the media websites you have selected</li>
-                    </ul>
-                    <p>As for the arcs?</p>
-                    <ul>
-                        <li> The blue arcs show your connection to the media websites you have selected</li>
-                        <li>...while the red arcs show your connection to tracking companies</li>
-                    </ul>
-
-                </section>
-
-            </section>
-
-
-        <section>
-            <h4> www.wikileaks.org: Example of media organisation which does NOT enable online tracking</h4>
-            <img src="../images/wikileaks.png" />
-            <a href="http://213.108.108.94:8000/#DEU_60">Wikileaks from Germany</a>
-        </section>
-
-        <section>
+ <section>
             <h2>
              The Global South does NOT own its network infrastructure
             </h2>
@@ -246,7 +207,7 @@ TODO- add autonomous system link
             </ul>
         </section>
 
-        <section>
+ <section>
             <h2>Geopolitics of data</h2>
             <p>Ukraine Russia</p>
             <small>TODO link</small>
@@ -258,7 +219,28 @@ TODO- add autonomous system link
             <small>TODO link</small>
         </section>
 
-        <section>
+            <section>
+                <h2>Tapping fibre-optic cables</h2>
+                <img src="../images/partner-eyes.png" width="680" />
+                <small>
+                    And check Ingrid Burrington <a href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>.
+                </small>
+            </section>
+
+            <section>
+                <h4>Do you remember FoxAcid ?</h4>
+                <img src="../images/FoxAcid.png" width="600"/>
+                <h4>Or FinFly ISP?</h4>
+                <p>They are based on the <b>interception of HTTP connections</b> which are redirected to other servers and subsequently injected with a browser exploit or tampered with a download on-the-fly.</p>
+            </section>
+
+<section>
+            <h4> www.wikileaks.org: Example of media organisation which does NOT enable online tracking</h4>
+            <img src="../images/wikileaks.png" />
+            <a href="http://213.108.108.94:8000/#DEU_60">Wikileaks from Germany</a>
+        </section>
+
+ <section>
             <section>
                 <h2>Through which media websites are we tracked the most?</h2>
             </section>
@@ -270,14 +252,17 @@ TODO- add autonomous system link
             </section>
 
             <section>
-                <p>
-                    Trackography API
-                </p>
-                <img src="../images/APIflow.png" />
-                <p>
-                    URL
-                </p>
+                <h2>
+                    User vulnerability: profiling
+                </h2>
+                <p>When we access media websites, third parties track us and create profiles about us - which may or may not be accurate</p>
             </section>
+
+            <section>
+
+                <section>
+                    <img src="../images/manylinks.png" />
+                </section>
 
             <section>
 
@@ -381,7 +366,7 @@ TODO- add autonomous system link
                     <h2>
                         Making the privacy policies machine-readable
                     </h2>
-                    <p>We are storing collected data in a CSV</p>
+                    <p>Access and contribute to our data collected on companies' privacy policies through our CSV on github</p>
                 </section>
 
                 <section>
@@ -389,6 +374,16 @@ TODO- add autonomous system link
                     show CSV, show RESTful API
                 </section>
 
+            </section>
+
+ <section>
+                <p>
+                    Trackography API
+                </p>
+                <img src="../images/APIflow.png" />
+                <p>
+                    URL
+                </p>
             </section>
 
 
@@ -466,7 +461,7 @@ TODO- add autonomous system link
                     Thanks! Questions?
                 </h1>
                 <p>
-                    <a href="https://twitter.com/trackography_">@trackography_</a>. Automatical update every received test.
+                    <a href="https://twitter.com/trackography_">@trackography_</a> - will automatically tweet the new results we receive
                 </p>
                 <p>
                     myshadow link
