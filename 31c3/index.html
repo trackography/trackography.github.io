@@ -106,41 +106,64 @@
                     <small>The creation of such media lists requires local knowledge - which is why need you to collaborate with us</small>
                 </section>
 
-                <section>
-                    <h2>
-                        Current numbers
-                    </h2>
-                    <pre>
+            </section>
+
+            <section>
+                <h2>
+                    Current numbers
+                </h2>
+                <pre>
 curl 213.108.108.94:8000/countries
 ["CAN", "SAU", "CHE", "AUS", "GBR", "IDN", "NGA", "GRC", "IND", "PHL", "IRL", "UKR", "BRA", "ISR", "ITA", "SYR", "GTM", "DEU", "MEX", "PSE", "KEN", "HRV", "ZAF", "ESP", "PAK", "KHM", "THA", "RUS", "URY", "SWE"]
-                    </pre>
-                    <small>30 collected countries</small>
-                    <pre>
-Number of countries we have media lists for: 40
+                </pre>
+                <small>30 collected countries</small>
+                <p>
+                    Number of countries we have media lists for: <b>40</b>
+                </p>
+                <pre>
 github.com/vecna/trackmap/verified_media$ ls | wc -l
 40
-Number of media websites: 3,242
+                </pre>
+                <p>
+                    Number of media websites: <b>3,242</b>
+                </p>
+                <pre>
 github.com/vecna/trackmap/verified_media$ grep http * | wc -l
 3242
-Number of media included in every test: 54
+                </pre>
+                <p>
+                Number of media included in every test: <b>54</b>
+                </p>
+                <pre>
 github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
 54
-                    </pre>
-                </section>
-
+                </pre>
             </section>
 
             <section>
-              todo - slide 4
-            </section>
-
-            <section>
-                <h2></h2>
+                <h3>
+                    Developing a Script to Track the Trackers
+                </h3>
+                <p>
+                    Our script is designed to:
+                </p>
                 <ul>
-                    <li>media list: a pull request is enough, <a href="https://github.com/vecna/trackmap">(git repo)</a>.</li>
-                    <li>test results: follow the readme, start the script declaring your country, the results are automatically submitted to our server.</li>
+                    <li>
+                        Perform an HTTP connection (using phantomjs) to every media website under analysis
+                    </li>
+                    <li>
+                        Collect all the third party URLs which are included in the media websites under analysis
+                    </li>
+                    <li>
+                        Perform a traceroute for every URL included in the media websites under analysis
+                    </li>
+                    <li>
+                        Identify the countries which host the network infrastructure required to reach the servers of the media websites under analysis, as well as the third party servers included in the specific websites through a GeoIP conversion of all the included IP addresses.
+                    </li>
                 </ul>
+
             </section>
+
 
 
             <section>
@@ -241,7 +264,7 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
                 <section>
                     <h2>Not so easy to say!</h2>
                     <p>They change in time, but most important, change depending on the source!</p>
-                    TODO link to heatmap.
+                    <b>TODO - link heatmap</b>: http://213.108.108.94:8000/glob.html
                 </section>
             </section>
 
@@ -451,6 +474,30 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
                 </tr>
               </tbody>
             </table>
+            </section>
+
+            <section>
+                <h2>Help us tracking the trackers!</h2>
+
+                <ul>
+                    <li>
+                        Is your country missing from Trackography?
+                    </li>
+                </ul>
+                <small>
+                    contribute <a href="https://github.com/vecna/trackmap/tree/master/verified_media">to media list</a>, and please <i>pull request</i>.
+                </small>
+                <ul>
+                    <li>
+                        Are you interested in increasing transparency about global online tracking?
+                    </li>
+                </ul>
+                <pre>
+                    wget https://github.com/vecna/trackmap/blob/master/setup.sh && sh ./setup.sh
+                    cd trackmap
+                    ./perform_analysis.py -c NAME_OF_YOUR_COUNTRY
+                </pre>
+
             </section>
 
 
