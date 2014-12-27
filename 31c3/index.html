@@ -82,22 +82,6 @@
             </ul>
         </section>
 
-        <section>
-
-            <p>What does Trackography show when we select media websites?</p>
-            <ul>
-                <li> The blue countries host the servers of the media websites you have selected</li>
-                <li> The purple countries host the network infrastructure required to access the media websites you have selected</li>
-                <li> The red countries host the servers of the companies that track you when you access the media websites you have selected</li>
-            </ul>
-            <p>As for the arcs?</p>
-            <ul>
-                <li> The blue arcs show your connection to the media websites you have selected</li>
-                <li>...while the red arcs show your connection to tracking companies</li>
-            </ul>
-
-        </section>
-
 
         <section>
 
@@ -123,117 +107,126 @@
                 <small>The creation of such media lists requires local knowledge - which is why we need you to collaborate with us!</small>
             </section>
 
-            <section>
-                <h3>
-                    Developing a Script to Track the Trackers
-                </h3>
-                <p>
-                    Our script is designed to:
-                </p>
-                <ul>
-                    <li>
-                        Perform an HTTP connection (using phantomjs) to every media website under analysis
-                    </li>
-                    <li>
-                        Collect all the third party URLs which are included in the media websites under analysis
-                    </li>
-                    <li>
-                        Perform a traceroute for every URL included in the media websites under analysis
-                    </li>
-                    <li>
-                        Identify the countries which host the network infrastructure and perform a GeoIP conversion of all the included IP addresses in the network path
-                    </li>
-                </ul>
+        </section>
 
-            </section>
 
-            <section>
-                <h2>
-                    Data collected so far
-                </h2>
-                <pre>
+        <section>
+            <h3>
+                Developing a Script to Track the Trackers
+            </h3>
+            <p>
+                Our script is designed to:
+            </p>
+            <ul>
+                <li>
+                    Perform an HTTP connection (using phantomjs) to every media website under analysis
+                </li>
+                <li>
+                    Collect all the third party URLs which are included in the media websites under analysis
+                </li>
+                <li>
+                    Perform a traceroute for every URL included in the media websites under analysis
+                </li>
+                <li>
+                    Identify the countries which host the network infrastructure and perform a GeoIP conversion of all the included IP addresses in the network path
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>
+                Data collected so far
+            </h2>
+            <pre>
 curl 213.108.108.94:8000/countries
 ["CAN", "SAU", "CHE", "AUS", "GBR", "IDN", "NGA", "GRC", "IND", "PHL", "IRL", "UKR", "BRA", "ISR", "ITA", "SYR", "GTM", "DEU", "MEX", "PSE", "KEN", "HRV", "ZAF", "ESP", "PAK", "KHM", "THA", "RUS", "URY", "SWE"]
-                </pre>
-                <small>30 countries</small>
-                <p>
-                    Number of countries we have media lists for: <b>40</b>
-                </p>
-                <pre>
+            </pre>
+            <small>30 countries</small>
+            <p>
+                Number of countries we have media lists for: <b>40</b>
+            </p>
+            <pre>
 github.com/vecna/trackmap/verified_media$ ls | wc -l
 40
-                </pre>
-                <p>
-                    Number of media websites: <b>3,242</b>
-                </p>
-                <pre>
+            </pre>
+            <p>
+                Number of media websites: <b>3,242</b>
+            </p>
+            <pre>
 github.com/vecna/trackmap/verified_media$ grep http * | wc -l
 3242
-                </pre>
-                <p>
-                    Number of media included in every test: <b>54</b>
-                </p>
-                <pre>
+            </pre>
+            <p>
+                Number of media included in every test: <b>54</b>
+            </p>
+            <pre>
 github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
 54
-                </pre>
-            </section>
+            </pre>
+        </section>
 
+        <section>
+            <h2>User vulnerability: network topology</h2>
+            <ul>
+                <li>When we access media websites, our connections travel through the network infrastructure of foreign states </li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they have access to the HTTP referer, cookies, and other identifiable information.</li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they can redirect traffic to malicious servers.</li>
+            </ul>
+        </section>
 
-            <section>
-                <h2>User vulnerability: network topology</h2>
-                <ul>
-                    <li>When we access media websites, our connections travel through the network infrastructure of foreign states </li>
-                    <li>When unencrypted connections pass though the network infrastructure of states, they have access to the HTTP referer</li>
-                </ul>
-            </section>
+        <section>
+            <h2>
+                The Global South does NOT own its network infrastructure
+            </h2>
+            <ul>
+                <li>Developed country: MARIA LATER <a href="http://213.108.108.94:8000/#ITA_79a29a36">Italy, (Corriere, Rai, Giornale)</a>.</li>
+                <li>Developing country: IDEM blue: <a href="http://213.108.108.94:8000/#NGA_8a15">Nigeria, (Saharareport, Sunnewsonline)</a>.</li>
+            </ul>
+        </section>
 
-            <section>
-                <h2>
-                    The Global South does NOT own its network infrastructure
-                </h2>
-                <ul>
-                    <li>Developed country: MARIA LATER <a href="http://213.108.108.94:8000/#ITA_79a29a36">Italy, (Corriere, Rai, Giornale)</a>.</li>
-                    <li>Developing country: IDEM blue: <a href="http://213.108.108.94:8000/#NGA_8a15">Nigeria, (Saharareport, Sunnewsonline)</a>.</li>
-                </ul>
-            </section>
+        <section>
+            <h2> Foreign investment in network infrastructure</h2>
+            <ul>
+                <li>
+                    TelecomItalia (TI) in Brasil: <a href="http://213.108.108.94:8000/#BRA_10">75% of connections to media websites from Brazil go through TI infrastructure</a>
+                    TODO- add autonomous system link
+                </li>
+            </ul>
+        </section>
 
-            <section>
-                <h2> Foreign investment in network infrastructure</h2>
-                <ul>
-                    <li>
-                        TelecomItalia (TI) in Brasil: <a href="http://213.108.108.94:8000/#BRA_10">75% of connections to media websites from Brazil go through TI infrastructure</a>
-                        TODO- add autonomous system link
-                    </li>
-                </ul>
-            </section>
+        <section>
+            <h2>Geopolitics of data I</h2>
+            <p>Ukraine &#x2661; Russia</p>
+            <p>
+                Check it out: <a href="http://213.108.108.94:8000/#UKR_14">Ukraina, Pradva</a>
+            </p>
+        </section>
 
-            <section>
-                <h2>Geopolitics of data</h2>
-                <p>Ukraine Russia</p>
-                <small>TODO link</small>
-            </section>
+        <section>
+            <h2>Geopolitics of data II</h2>
+            <p>Israel &#x2661; Palestine</p>
+            <p>
+                Check it out with <a href="http://213.108.108.94:8000/#PSE_29a36a48a34">(Three media selected)</a>
+            </p>
+        </section>
 
-            <section>
-                <h2>Geopolitics of data</h2>
-                <p>Israel Palestine</p>
-                <small>TODO link</small>
-            </section>
+        <section>
+            <h2>Tapping fibre-optic cables</h2>
+            <img src="../images/partner-eyes.png" width="680" />
+            <small>
+                And check Ingrid Burrington <a href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>.
+            </small>
+        </section>
 
-            <section>
-                <h2>Tapping fibre-optic cables</h2>
-                <img src="../images/partner-eyes.png" width="680" />
-                <small>
-                    And check Ingrid Burrington <a href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>.
-                </small>
-            </section>
+        <section>
+            <h4>Do you remember FoxAcid ?</h4>
+            <img src="../images/FoxAcid.png" width="600"/>
+            <h4>Or FinFly ISP?</h4>
+            <p>They are based on the <b>interception of HTTP connections</b> which are redirected to other servers and subsequently injected with a browser exploit or tampered with a download on-the-fly.</p>
+        </section>
 
-            <section>
-                <h4>Do you remember FoxAcid ?</h4>
-                <img src="../images/FoxAcid.png" width="600"/>
-                <h4>Or FinFly ISP?</h4>
-                <p>They are based on the <b>interception of HTTP connections</b> which are redirected to other servers and subsequently injected with a browser exploit or tampered with a download on-the-fly.</p>
-            </section>
+        <section>
 
             <section>
                 <h4> www.wikileaks.org: Example of media organisation which does NOT enable online tracking</h4>
@@ -242,235 +235,242 @@ github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc
             </section>
 
             <section>
-                <section>
-                    <h2>Through which media websites are we tracked the most?</h2>
-                </section>
-                <section>
-                    <h2>Not so easy to say!</h2>
-                    <p>Tracking changes across time, but more importantantly, it changes depending on the location of the client!</p>
-                    <b>TODO - link heatmap</b>: http://213.108.108.94:8000/glob.html
-                </section>
+                <p>What does Trackography show when we select media websites?</p>
+                <ul>
+                    <li> The blue countries host the servers of the media websites you have selected</li>
+                    <li> The purple countries host the network infrastructure required to access the media websites you have selected</li>
+                    <li> The red countries host the servers of the companies that track you when you access the media websites you have selected</li>
+                </ul>
+                <p>As for the arcs?</p>
+                <ul>
+                    <li> The blue arcs show your connection to the media websites you have selected</li>
+                    <li>...while the red arcs show your connection to tracking companies</li>
+                </ul>
             </section>
 
+        </section>
+
+        <section>
             <section>
-                <h2>
-                    User vulnerability: profiling
-                </h2>
-                <p>When we access media websites, third parties track us and create profiles about us - which may or may not be accurate</p>
+                <h2>Through which media websites are we tracked the most?</h2>
+                <h4>Not so easy to say!</h4>
+                <p>Tracking changes across time, but more importantantly, it changes depending on the location of the client!</p>
+                <b>TODO - link heatmap</b>: http://213.108.108.94:8000/glob.html
             </section>
+        </section>
 
-            <section>
-
-                <section>
-                    <img src="../images/manylinks.png" />
-                </section>
-
-                <section>
-
-                    <section>
-                        <h2>
-                            Meet the Trackers
-                        </h2>
-                        <p>
-                            Third party trackers (a.k.a tracking companies) engage in (one or more of) the following:
-                        </p>
-                        <ul>
-                            <li>Advertising</li>
-                            <li>Profiling </li>
-                            <li>Market Research </li>
-                            <li>Web Analytics </li>
-                            <li>Web Crawling </li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>But how do the Trackers handle our data?</h2>
-                        <p>
-                            We collected the following fields of data from the privacy policies of some of the globally prevailing tracking companies:
-                        </p>
-
-                        <ul>
-                            <li>
-                                The types of data they collect
-                            </li>
-                            <li>
-                                Whether they provide safeguards to prevent the full identification of users' IP addresses
-                            </li>
-                            <li>
-                                Whether users can opt-out from their tracking
-                            </li>
-                            <li>
-                                Whether they support Do Not Track (DNT)
-                            </li>
-                            <li>
-                                The types of tracking technologies they use
-                            </li>
-                            <li>
-                                Whether they comply with the US – EU Safe Harbour Framework
-                            </li>
-                            <li>
-                                Whether they are TRUSTe certified
-                            </li>
-                        </ul>
-
-                    </section>
-
-                    <section>
-                        <h3>Globally prevailing tracking companies</h3>
-                        <ul>
-                            <li>
-                                22 out of 25 are based in the U.S.
-                            </li>
-                            <li>
-                                19 out of 25 state that they collect personally identifiable information
-                            </li>
-                            <li>
-                                Only 3 out of 25 support Do Not track (DNT)
-                            </li>
-                            <li>
-                                and only 11 out of 25 disclose how long they retain data for
-                            </li>
-                        </ul>
-
-                    </section>
-
-                    <section>
-                        <h2>Opt-Out ?</h2>
-                        <p>
-                            Largely conditional because in some cases:
-                        </p>
-
-                        <ul>
-                            <li>
-                                Users can only opt-out if their browser is not configured to block third party cookies
-                            </li>
-                            <li>
-                                Users can only opt-out by cancelling their account with a service
-                            </li>
-                            <li>
-                                Users need to opt-out from every device that they use
-                            </li>
-                            <li>
-                                Users can only opt-out from the browser that they are using
-                            </li>
-                            <li>
-                                If users opt-out they will have restricted access to content, features and services
-                            </li>
-                            <li>
-                                ...and lets not forget the various default online tracking settings browsers have...
-                            </li>
-                        </ul>
-
-                    </section>
-
-                    <section>
-                        <h2>
-                            Making the privacy policies machine-readable
-                        </h2>
-                        <p>Access and contribute to our data collected on companies' privacy policies through our CSV on github</p>
-                    </section>
-
-                    <section>
-                        <h2>TODO</h2>
-                        show CSV, show RESTful API
-                    </section>
-
-                </section>
-
-                <section>
-                    <p>
-                        Trackography API
-                    </p>
-                    <img src="../images/APIflow.png" />
-                    <p>
-                        URL
-                    </p>
-                </section>
+        <section>
+            <h2>
+                User vulnerability: profiling
+            </h2>
+            <p>When we access media websites, third parties track us and create profiles about us - which may or may not be accurate</p>
+        </section>
 
 
-                <section>
-                    <h1>How can we block and circumvent online tracking?</h1>
+        <section>
+            <h2>Think to a fucking title for this slide</h2>
+            <img src="../images/manylinks.png" />
+        </section>
 
-                    <table border="2" cellpadding="1" cellspacing="1" id="solutiontable">
-                        <tbody>
-                        <tr>
-                            <td>Types of tools</td>
-                            <td>Tools for Firefox</td>
-                            <td>Tools for Chrome</td>
-                        </tr>
-                        <tr>
-                            <td>Blocks third party trackers</td>
-                            <td><a href="https://www.eff.org/privacybadger">Privacy Badger</a>, <a href="https://adblockplus.org/">AdBlock Plus</a>,<a href="https://www.ghostery.com/en/"> Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
-                            <td><a href="https://adblockplus.org/">Adblock Plus</a>, <a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
-                        </tr>
-                        <tr>
-                            <td>Blocks third party scripts</td>
-                            <td><a href="https://noscript.net/">NoScript</a></td>
-                            <td><a href="https://code.google.com/p/scriptno/">ScriptNo</a></td>
-                        </tr>
-                        <tr>
-                            <td>Blocks cross-site tracking</td>
-                            <td><a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/">RequestPolicy</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/priv8/">Priv8</a></td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Sets opt-out cookies</td>
-                            <td><a href="https://jmhobbs.github.io/beef-taco/">Beef Taco</a></td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Clears your browsing history</td>
-                            <td><a href="https://addons.mozilla.org/en-us/firefox/addon/clickclean/">Click&amp;Clean</a></td>
-                            <td><a href="http://www.hotcleaner.com/clickclean_chrome.html">Click&amp;Clean</a></td>
-                        </tr>
-                        <tr>
-                            <td>Visualises third party trackers</td>
-                            <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
-                            <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </section>
 
-                <section>
-                    <h2>Help us Track the Trackers</h2>
+        <section>
+            <h2>
+                Meet the Trackers
+            </h2>
+            <p>
+                Third party trackers (a.k.a tracking companies) engage in (one or more of) the following:
+            </p>
+            <ul>
+                <li>Advertising</li>
+                <li>Profiling </li>
+                <li>Market Research </li>
+                <li>Web Analytics </li>
+                <li>Web Crawling </li>
+            </ul>
+        </section>
 
-                    <ul>
-                        <li>
-                            Is your country missing from Trackography?
-                        </li>
-                    </ul>
-                    <small>
-                        Contribute by helping us create or review your country's <a href="https://github.com/vecna/trackmap/tree/master/verified_media">media list</a> and please <i>pull request</i>.
-                    </small>
-                    <ul>
-                        <li>
-                            Are you interested in increasing transparency about global online tracking?
-                        </li>
-                    </ul>
+        <section>
+            <h2>But how do the Trackers handle our data?</h2>
+            <p>
+                We collected the following fields of data from the privacy policies of some of the globally prevailing tracking companies:
+            </p>
+
+            <ul>
+                <li>
+                    The types of data they collect
+                </li>
+                <li>
+                    Whether they provide safeguards to prevent the full identification of users' IP addresses
+                </li>
+                <li>
+                    Whether users can opt-out from their tracking
+                </li>
+                <li>
+                    Whether they support Do Not Track (DNT)
+                </li>
+                <li>
+                    The types of tracking technologies they use
+                </li>
+                <li>
+                    Whether they comply with the US – EU Safe Harbour Framework
+                </li>
+                <li>
+                    Whether they are TRUSTe certified
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h3>Globally prevailing tracking companies</h3>
+            <ul>
+                <li>
+                    22 out of 25 are based in the U.S.
+                </li>
+                <li>
+                    19 out of 25 state that they collect personally identifiable information
+                </li>
+                <li>
+                    Only 3 out of 25 support Do Not track (DNT)
+                </li>
+                <li>
+                    and only 11 out of 25 disclose how long they retain data for
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Opt-Out ?</h2>
+            <p>
+                Largely conditional because in some cases:
+            </p>
+
+            <ul>
+                <li>
+                    Users can only opt-out if their browser is not configured to block third party cookies
+                </li>
+                <li>
+                    Users can only opt-out by cancelling their account with a service
+                </li>
+                <li>
+                    Users need to opt-out from every device that they use
+                </li>
+                <li>
+                    Users can only opt-out from the browser that they are using
+                </li>
+                <li>
+                    If users opt-out they will have restricted access to content, features and services
+                </li>
+                <li>
+                    ...and lets not forget the various default online tracking settings browsers have...
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>
+                Making the privacy policies machine-readable
+            </h2>
+            <p>Access and contribute to our data collected on companies' privacy policies through our CSV on github</p>
+        </section>
+
+        <section>
+            <h2>TODO</h2>
+            show CSV, show RESTful API
+        </section>
+
+
+        <section>
+            <p>
+                Trackography API
+            </p>
+            <img src="../images/APIflow.png" />
+            <p>
+                <a href="https://github.com/vecna/trackmap/blob/master/RESTfulAPI.md">RESTful documentation</a>.
+            </p>
+        </section>
+
+
+        <section>
+            <h4>How can we block and circumvent online tracking?</h4>
+
+            <table border="2" cellpadding="1" cellspacing="1" id="solutiontable">
+                <tbody>
+                <tr>
+                    <td>Types of tools</td>
+                    <td>Tools for Firefox</td>
+                    <td>Tools for Chrome</td>
+                </tr>
+                <tr>
+                    <td>Blocks third party trackers</td>
+                    <td><a href="https://www.eff.org/privacybadger">Privacy Badger</a>, <a href="https://adblockplus.org/">AdBlock Plus</a>,<a href="https://www.ghostery.com/en/"> Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a href="https://adblockplus.org/">Adblock Plus</a>, <a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks third party scripts</td>
+                    <td><a href="https://noscript.net/">NoScript</a></td>
+                    <td><a href="https://code.google.com/p/scriptno/">ScriptNo</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks cross-site tracking</td>
+                    <td><a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/">RequestPolicy</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/priv8/">Priv8</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sets opt-out cookies</td>
+                    <td><a href="https://jmhobbs.github.io/beef-taco/">Beef Taco</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Clears your browsing history</td>
+                    <td><a href="https://addons.mozilla.org/en-us/firefox/addon/clickclean/">Click&amp;Clean</a></td>
+                    <td><a href="http://www.hotcleaner.com/clickclean_chrome.html">Click&amp;Clean</a></td>
+                </tr>
+                <tr>
+                    <td>Visualises third party trackers</td>
+                    <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Help us Track the Trackers</h2>
+
+            <p><b>
+                Is your country missing from Trackography?
+            </b></p>
+            <small>
+                Contribute by helping us create or review your country's <a href="https://github.com/vecna/trackmap/tree/master/verified_media">media list</a> and please <i>pull request</i>.
+            </small>
+
+            <p><b>
+
+            </b></p>
                 <pre>
-                    wget https://github.com/vecna/trackmap/blob/master/setup.sh && sh ./setup.sh
-                    cd trackmap
-                    ./perform_analysis.py -c NAME_OF_YOUR_COUNTRY
+wget https://github.com/vecna/trackmap/blob/master/setup.sh && sh ./setup.sh
+cd trackmap
+./perform_analysis.py -c NAME_OF_YOUR_COUNTRY
                 </pre>
 
-                </section>
+        </section>
 
 
-                <section>
-                    <h1>
-                        Thanks! Questions?
-                    </h1>
-                    <p>
-                        <a href="https://twitter.com/trackography_">@trackography_</a> - will automatically tweet the new results we receive
-                    </p>
-                    <p>
-                        myshadow link
-                    </p>
+        <section>
+            <h1>
+                Thanks! Questions?
+            </h1>
+            <p>
+                <a href="https://twitter.com/trackography_">@trackography_</a> - will automatically tweet the new results we receive
+            </p>
+            <p>
+                myshadow link
+            </p>
 
-                </section>
-
-
+        </section>
     </div>
 </div>
 
