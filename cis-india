@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>31c3 - Trackography - you never read alone</title>
+    <link rel="stylesheet" href="../nm/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../nm/reveal.js/css/theme/default.css" id="theme">
+
+    <style>
+        .authors {
+            width: 50%;
+            float: left;
+            align-content: center;
+        }
+        .authorscointainer {
+            border: solid 2px wheat;
+            clear: both;
+            padding: 3px;
+        }
+        #solutiontable {
+            font-size: 0.6em;
+            font-family: Consolas, courier;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+<div class="reveal">
+    <!-- Wrap all slides in a single "slides" class -->
+    <div class="slides">
+
+        <section class="ttc">
+            <h1>Trackography</h1>
+            <h2>You never read alone</h2>
+
+            <div class="authorscointainer">
+                    <span class="authors">
+                        Claudio Agosti,<br>
+                        <a href="https://globaleaks.org">GlobaLeaks</a>,
+                        <a href="http://logioshermes.org">Hermes Center</a><br>
+                        <a href="http://tacticaltech.org">Tactical Tech</a>
+                    </span>
+                    <span class="authors">
+                        Maria Xynou,<br>
+                        <a href="http://tacticaltech.org">Tactical Tech</a>
+                    </span>
+            </div>
+            <div class="authorscointainer">
+                <br>
+                <p style="font-weight: bolder; color: #efef8f">A Tactical Tech project</p>
+                <br>
+            </div>
+            <div class="authorscointainer">
+                <p>31st Chaos Communication Congress (31c3), 29th December 2014</p>
+            </div>
+            <br><br>
+            <small>press ESC to display slide tree</small>
+
+        </section>
+
+        <section>
+            <section>
+                <h2>Online tracking</h2>
+                <blockquote>
+                    “When governments collect data we call it <b>surveillance</b>, but when companies do the same, we mistakenly call it user <b>services</b>”
+                </blockquote>
+                <small>Marek Tuszynski.</small>
+            </section>
+
+        </section>
+
+
+        <section>
+            <h2>
+                Why did we develop Trackography?
+            </h2>
+            <ul>
+                <li>We are interested in the online tracking business because it is pretty opaque</li>
+                <li>We have seen through the Snowden revelations that intelligence agencies have tapped into the data collected by tracking companies</li>
+                <li>We do not control the profiles created about us by online tracking companies - which can lead to abuse</li>
+                <li>This is a project for advocacy and transparency</li>
+            </ul>
+        </section>
+
+
+        <section>
+
+            <section>
+                <h2>Why are we focusing on media websites? </h2>
+                <ul>
+                    <li>One of the most common things we do is read the news online</li>
+                    <li>The business model of the media is largely dependent on advertising</li>
+                    <li>The type of news we read show more about us in the long-term than what we think</li>
+                    <li>A Facebook experiment shows that what we read influences our behaviour</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What do we mean by 'media'?</h2>
+                <p>
+                    We mean websites which cover the news, are of public interest and which are regularly updated </p>
+                <p> Every country has its own media websites which are visited by individuals from that specific country
+                </p>
+                <p>
+                    We compiled lists of media websites for each country we examined and distinguished between global (e.g. theguardian.co.uk), national (covers the entire nation), regional (covers a region) media websites and blogs
+                </p>
+                <small>The creation of such media lists requires local knowledge - which is why we need you to collaborate with us!</small>
+            </section>
+
+        </section>
+
+
+        <section>
+            <h3>
+                Developing a Script to Track the Trackers
+            </h3>
+            <p>
+                Our script is designed to:
+            </p>
+            <ul>
+                <li>
+                    Perform an HTTP connection (using phantomjs) to every media website under analysis
+                </li>
+                <li>
+                    Collect all the third party URLs which are included in the media websites under analysis
+                </li>
+                <li>
+                    Perform a traceroute for every URL included in the media websites under analysis
+                </li>
+                <li>
+                    Identify the countries which host the network infrastructure and perform a GeoIP conversion of all the included IP addresses in the network path
+                </li>
+            </ul> <br>
+        <small>But the script does NOT work in conjunction with your browser - it just performs a connection to the media and sends us the results</small>
+        </section>
+
+        <section>
+            <h2>
+                Data collected so far
+            </h2>
+            <pre>
+curl https://trackography.org/countries
+["CAN", "SAU", "CHE", "AUS", "GBR", "IDN", "NGA", "GRC", "IND", "PHL", "IRL", "UKR", "BRA", "ISR", "ITA", "SYR", "GTM", "DEU", "MEX", "PSE", "KEN", "HRV", "ZAF", "ESP", "PAK", "KHM", "THA", "RUS", "URY", "SWE"]
+            </pre>
+            <small>30 countries</small>
+            <p>
+                Number of countries we have media lists for: <b>40</b>
+            </p>
+            <pre>
+github.com/vecna/trackmap/verified_media$ ls | wc -l
+40
+            </pre>
+            <p>
+                Number of media websites: <b>3,242</b>
+            </p>
+            <pre>
+github.com/vecna/trackmap/verified_media$ grep http * | wc -l
+3242
+            </pre>
+            <p>
+                Number of media included in every test: <b>54</b>
+            </p>
+            <pre>
+github.com/vecna/trackmap/verified_media$ grep http ../special_media/global | wc -l
+54
+            </pre>
+        </section>
+
+        <section>
+            <h2>Third party trackers</h2>
+            <img src="../images/manylinks.png" />
+            <a href="https://trackography.org">Access the Trackography map</a>
+        </section>
+
+        <section>
+
+            <section>
+                <h4> www.wikileaks.org: Example of media organisation which does NOT enable online tracking</h4>
+                <img src="../images/wikileaks.png" />
+                <a href="https://trackography.org/#DEU_60">Wikileaks from Germany</a>
+            </section>
+
+            <section>
+                <p>What does Trackography show when we select media websites?</p>
+                <ul>
+                    <li> The blue countries host the servers of the media websites you have selected</li>
+                    <li> The purple countries host the network infrastructure required to access the media websites you have selected</li>
+                    <li> The red countries host the servers of the companies that track you when you access the media websites you have selected</li>
+                </ul>
+                <p>As for the arcs?</p>
+                <ul>
+                    <li> The blue arcs show your connection to the media websites you have selected</li>
+                    <li>...while the red arcs show your connection to tracking companies</li>
+                </ul>
+            </section>
+
+        </section>
+
+        <section>
+            <h2>User Vulnerability: Network Topology</h2>
+            <ul>
+                <li>When we access media websites, our connections travel through the network infrastructure of foreign states</li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they have access to the HTTP referer, cookies, and other identifiable information</li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they can redirect traffic to malicious servers</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tapping fibre-optic cables</h2>
+            <img src="../images/partner-eyes.png" width="680" />
+            <small>
+                And check Ingrid Burrington <a href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>
+            </small>
+        </section>
+
+        <section>
+            <h4>Do you remember FoxAcid ?</h4>
+            <img src="../images/FoxAcid.png" width="600"/>
+            <h4>Or FinFly ISP?</h4>
+            <p>They are based on the <b>interception of HTTP connections</b> which are redirected to other servers and subsequently injected with a browser exploit or tampered with a download on-the-fly</p>
+        </section>
+
+
+        <section>
+            <h2>
+                Geopolitics of data: Developing world
+            </h2>
+<p>The media servers of developing countries are hosted in the datacentres of developed countries</p>
+            <ul>
+                <li>Developed countries: They own their own servers for their media websites  <a href="https://trackography.org/#ITA_79a29a36">Italy, (Corriere, Rai, Giornale)</a></li>
+                <li>Developing countries: The servers of their media websites are hosted in developed countries: <a href="https://trackography.org/#NGA_8a15">Nigeria, (Saharareport, Sunnewsonline)</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> Foreign investment in network infrastructure</h2>
+            <ul>
+                <li>
+                    TelecomItalia (TI) in Brasil: <a href="https://trackography.org/#BRA_10">75% of connections to media websites from Brazil go through TI infrastructure</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Geopolitics of data I</h2>
+            <p>Ukraine &#x2661; Russia</p>
+            <p>
+                Check it out: <a href="https://trackography.org/#UKR_14a51">Ukraine: Pradva & Vesti</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Geopolitics of data II</h2>
+            <p>
+                <a href="https://trackography.org/perc.html">
+                    Percentage of exposure per country
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <section>
+                <h2>Through which media websites are we tracked the most?</h2>
+                <h4>Not so easy to say!</h4>
+                <p>Tracking changes across time, but more importantly, it changes depending on the location of the client!</p>
+                <p><a href="https://trackography.org/glob.html">Tracker heatmap</a></p>
+            </section>
+        </section>
+
+        <section>
+            <h2>
+                User Vulnerability: Profiling
+            </h2>
+            <p>When we access media websites, third parties track us and create profiles about us - which may or may not be accurate</p>
+            <p>
+                <a href="https://trackography.org/rich.html">Company presence percentage</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Trackers' Business Model
+            </h2>
+            <p>
+                Third party trackers (a.k.a tracking companies) engage in (one or more of) the following:
+            </p>
+            <ul>
+                <li>Advertising</li>
+                <li>Profiling </li>
+                <li>Market Research </li>
+                <li>Web Analytics </li>
+                <li>Web Crawling </li>
+            </ul>
+        </section>
+
+        <section>
+            <h4> Last night... </h4>
+            <p> ...did you access Der Spiegel to read about U.S attacks on crypto?</p>
+<p> Guess who else was watching...</p>
+            <small>
+                <a href="http://www.spiegel.de/international/germany/inside-the-nsa-s-war-on-internet-security-a-1010361.html">
+                    Prying Eyes: Inside the NSA's War on Internet Security
+                </a>, <a href="http://213.108.108.94:8000/#DEU_26a15">The article compared to the Spiegel homepage</a>
+            </small>
+            <img src="../images/SpiegelInternationalNSARelease.png" />
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>But how do the Trackers handle our data?</h2>
+                <p>
+                    We collected the following fields of data from the privacy policies of some of the globally prevailing tracking companies:
+                </p>
+
+                <ul>
+                    <li>
+                        The types of data they collect
+                    </li>
+                    <li>
+                        Whether they provide safeguards to prevent the full identification of users' IP addresses
+                    </li>
+                    <li>
+                        Whether users can opt-out from their tracking
+                    </li>
+                    <li>
+                        Whether they support Do Not Track (DNT)
+                    </li>
+                    <li>
+                        The types of tracking technologies they use
+                    </li>
+                    <li>
+                        Whether they comply with the US – EU Safe Harbour Framework
+                    </li>
+                    <li>
+                        Whether they are TRUSTe certified
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h2>Opt-Out ?</h2>
+                <p>
+                    Largely conditional because in some cases:
+                </p>
+                <ul>
+                    <li>
+                        Users can only opt-out if their browser is not configured to block third party cookies
+                    </li>
+                    <li>
+                        Users can only opt-out by cancelling their account with a service
+                    </li>
+                    <li>
+                        Users need to opt-out from every device that they use
+                    </li>
+                    <li>
+                        Users can only opt-out from the browser that they are using
+                    </li>
+                    <li>
+                        If users opt-out they will have restricted access to content, features and services
+                    </li>
+                    <li>
+                        ...and lets not forget the various default online tracking settings browsers have...
+                    </li>
+                </ul>
+
+            </section>
+
+        </section>
+
+        <section>
+            <h3>Globally prevailing tracking companies</h3>
+            <ul>
+                <li>
+                    22 out of 25 are based in the U.S.
+                </li>
+                <li>
+                    19 out of 25 state that they collect personally identifiable information
+                </li>
+                <li>
+                    Only 3 out of 25 support Do Not track (DNT)
+                </li>
+                <li>
+                    Only 11 out of 25 disclose how long they retain data for
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <p>
+                Trackography API
+            </p>
+            <img src="../images/APIflow.png" />
+            <p>
+                <a href="https://github.com/vecna/trackmap/blob/master/RESTfulAPI.md">RESTful documentation</a>,
+            <a href="https://github.com/vecna/trackmap/blob/master/csv/companies.csv">Privacy Policy in CSV @github</a>
+            </p>
+        </section>
+
+
+        <section>
+            <h4>How can we block and circumvent online tracking?</h4>
+
+            <table border="2" cellpadding="1" cellspacing="1" id="solutiontable">
+                <tbody>
+                <tr>
+                    <td>Types of tools</td>
+                    <td>Tools for Firefox</td>
+                    <td>Tools for Chrome</td>
+                </tr>
+                <tr>
+                    <td>Blocks third party trackers</td>
+                    <td><a href="https://www.eff.org/privacybadger">Privacy Badger</a>, <a href="https://adblockplus.org/">AdBlock Plus</a>,<a href="https://www.ghostery.com/en/"> Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a href="https://adblockplus.org/">Adblock Plus</a>, <a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks third party scripts</td>
+                    <td><a href="https://noscript.net/">NoScript</a></td>
+                    <td><a href="https://code.google.com/p/scriptno/">ScriptNo</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks cross-site tracking</td>
+                    <td><a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/">RequestPolicy</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/priv8/">Priv8</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sets opt-out cookies</td>
+                    <td><a href="https://jmhobbs.github.io/beef-taco/">Beef Taco</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Clears your browsing history</td>
+                    <td><a href="https://addons.mozilla.org/en-us/firefox/addon/clickclean/">Click&amp;Clean</a></td>
+                    <td><a href="http://www.hotcleaner.com/clickclean_chrome.html">Click&amp;Clean</a></td>
+                </tr>
+                <tr>
+                    <td>Visualises third party trackers</td>
+                    <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a href="https://www.ghostery.com/en/">Ghostery</a> and <a href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Help us Track the Trackers</h2>
+
+            <p><b>
+                Is your country missing from Trackography?
+            </b></p>
+            <p>
+                Contribute by helping us create or review your country's <a href="https://github.com/vecna/trackmap/tree/master/verified_media">media list</a> and please <i>pull request</i>.
+            </p>
+
+            <p><b>
+                When the media list is ready, run the collection script
+            </b></p>
+                <pre>
+wget https://github.com/vecna/trackmap/blob/master/setup.sh && sh ./setup.sh
+cd trackmap
+./perform_analysis.py -c NAME_OF_YOUR_COUNTRY
+                </pre>
+
+        </section>
+
+
+        <section>
+            <h1>
+                Thanks! Questions?
+            </h1>
+            <pre>
+pub   3200R/0x94E7EF47 2014-08-05 [expires: 2015-08-30]
+      Key fingerprint = ABC2 7639 5EE3 3245 A0A1  3973 40E2 6C25 94E7 EF47
+uid                    TrackMap project &lt;trackmap@tacticaltech.org&gt;
+sub   3200R/0x504DEBDF 2014-08-05 [expires: 2015-08-30]
+            </pre>
+              <p>Project twitter <a href="https://twitter.com/trackography_">@trackography_</a>
+            </p>
+            <p>
+             Access Trackography through Tactical Tech's <a href="https://myshadow.org/trackography"> Me & My Shadow </a>
+            </p>
+
+        </section>
+    </div>
+</div>
+
+<script src="../nm/reveal.js/lib/js/head.min.js"></script>
+<script src="../nm/reveal.js/js/reveal.min.js"></script>
+
+<script>
+    // Required, even if empty.
+    Reveal.initialize({
+    });
+</script>
+</body>
+</html>
+
