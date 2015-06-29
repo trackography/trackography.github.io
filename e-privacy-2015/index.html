@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>#IJF15 - project Trackography</title>
+    <link rel="stylesheet" href="../nm/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../nm/reveal.js/css/theme/default.css" id="theme">
+
+    <style>
+        .authors {
+            width: 50%;
+            float: left;
+            align-content: center;
+        }
+        .authorscointainer {
+            border: solid 2px wheat;
+            clear: both;
+            padding: 3px;
+        }
+        #solutiontable {
+            font-size: 0.6em;
+            font-family: Consolas, courier;
+        }
+        .left {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+<div class="reveal">
+    <!-- Wrap all slides in a single "slides" class -->
+    <div class="slides">
+
+        <section class="ttc">
+            <h2>Geopolitica nella rete: le nazioni che hanno i nostri dati.</h2>
+            <h4>Trackography</h4>
+
+            <div class="authorscointainer">
+                <a href="https://twitter.com/sniffjoke">Claudio Agosti</a>,<br>
+                <a target="_blank" href="https://tacticaltech.org">Tactical Tech</a>,
+                <a target="_blank" href="https://globaleaks.org">GlobaLeaks</a>,
+                <a target="_blank" href="http://logioshermes.org">Hermes Center</a>
+            </div>
+
+            <div class="authorscointainer">
+                <br>
+                <p style="font-weight: bolder; color: #efef8f">A Tactical Tech project</p>
+                <br>
+            </div>
+            <div class="authorscointainer">
+                <p>E-Privacy, Rome, 2 Luglio 2015</p>
+            </div>
+            <br>
+        </section>
+
+        <section class="left">
+            <h2>/me</h2>
+            <p><b>Name</b>: Claudio Agosti - claudio@tacticaltech.org</p>
+            <p>da 15 anni dedicato a sicurezza informatica e programmazione; declinate nella protezione dei diritti umani in rete.</p>
+        </section>
+
+        <section>
+
+            <section class="left">
+                <h2>Terze parti</h2>
+                <ul>
+                    <li>Quando navighi su un sito, solo chi è strettamente necessario alla tua navigazione, è a conoscenza della tua attività</li>
+                    <li><b>C'è chi è disposto a pagare per essere presente</b>.
+                    <li>Ci sono due tipi di guadagno: uno deriva dal comprare non solo la presenza, ma un piccolo spazio (advertising),
+                            l'altro deriva dallo studiare trend e correlare dati provenienti da diverse sorgenti.</li>
+                </ul>
+                <p>Il primo da un guadagno proprozionale alla presenza, il secondo favorisce le posizioni dominanti nel mercato.</p>
+            </section>
+
+            <section>
+                <h2>Le differenze ?</h2>
+            </section>
+
+            <section data-background="../images/CorriereAdvAndNot.png">
+            </section>
+
+            <section>
+                <h4>Implicazioni</h4>
+                <ul>
+                    <li>Compagnie di cui non hai mai sentito parlare, sono parte della tua navigazione</li>
+                    <li>Indipendentemente dal motivo per cui sono incluse, in potenza, possono tenere traccia del comportamento degli utenti a lungo termin</li>
+                    <li>Infrastrutture al di fuori della tua nazione vengono utilizzare per popolare una pagina web (o un'app) che ti viene fornita da un'azienda nazionale.</li>
+                    <li>Media (or altri fornitori di contenuti) sono incentivati a farlo, perchè questo porta loro incassi o altri benefici (interazione con i social, statistiche, efficenza)</li>
+                </ul>
+                <img src="../images/manylinks.png">
+            </section>
+
+        </section>
+
+        <section>
+
+            <section class="left">
+                <h2>Metodologia</h2>
+                <p>L'analisi è pensata per scalare in tutto il mondo, è attiva da Gennaio all'indirizzo <a href="https://trackography.org">https://trackography.org</a>.</p>
+                <ul>
+                    <li>Si emula il comportamento di un browser</li>
+                    <li>Per ogni connessione al di fuori di quella intesa, si analizza dove termina, se c'è una compania specifica</li>
+                    <li>Per ogni connessione al di fuori di quella intesa, si mappano gli Internet Service Provider che ci permettono di raggiungere la risorsa</li>
+                    <li><b>Dovrei, ma non lo fa ancora</b> accettare la cookie policy e comparare cosa succede dopo</li>
+                    <li><b>Se una terza parte è presente prima del conseno</b>, anche se non sta inviando un cookie, il tracciamento è inizato.<li>
+                </ul>
+            </section>
+
+            <section>
+                <p>Un breve estratto da questa <a href="http://www.repubblica.it/economia/2015/05/19/news/il_garante_della_privacy_contro_google_co_in_palio_la_liberta_e_ora_che_si_muova_anche_l_europa_-114705194/?refresh_ce">intervista al Presidente AGDP</a>.</p>
+                <img src="../images/Garante-Fingerprint.png" />
+            </section>
+
+            <section>
+                <h2>Come appare un profilo ?</h2>
+            </section>
+
+            <section data-background="../images/DailyActivity.png" data-background-size="1000px"></section>
+            <section data-background="../images/WeeklyActivity.png" data-background-size="800px"></section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>Implicazioni dell'andare oltre ai confini...</h2>
+            </section>
+
+            <section class="left">
+                <h2>Tutele ?</h2>
+                <p>Zero (se accetti un consenso informato)</p>
+                <p><b>E prima ?</b></p>
+                <p>Fintanto non accetti un Termine di Servizio, sei un utente anonimo senza nome e senza diritti, e se sei pure straniero, perchè curarsene ?</p>
+            </section>
+
+        </section>
+
+
+
+        <section>
+            <section>
+                <h2>
+                    Analisi delle infrastrutture
+                </h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+
+            <section>
+                <h3>AdBlock+, Ghostery, Disconnect</h3>
+                <p>Currently some add-ons for the browsers had reach a certain popularity</p>
+                <ul>
+                    <li>They are based on whitelist/blacklist to recognize advertising company</li>
+                    <li>They try to discriminate between adv, trackers, stats, widget.</li>
+                    <li>Media organisation has start to attack them.</li>
+                    <li>The market leader has start to "compromise" with a <a href="http://www.pcworld.com/article/2879412/heres-how-to-block-whitelist-ads-from-adblock-plus.html">whistelist model</a>.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>Is that a problem ?</h3>
+                <p style="font-size: 9em">NO!*</p>
+                <small><i>* considering the current Data Protection Directive ;)</i></small>
+            </section>
+
+            <section>
+                <h4>Personal Data Protection Glossary</h4>
+                <small>
+                    <a href="http://www.garanteprivacy.it/home_en/data-protection-and-privacy-glossary">Data Protection and Privacy Glossary</a>
+                </small>
+                <ul>
+                    <li>
+                        <b>Personal Data</b><small>Any information concerning natural persons that are or can be identified also by way of other items of information – e.g., via a number or an ID code
+                        . For instance, personal data is one's first or last name, address, Tax ID as well as a picture, the recording of one's voice or one's fingerprint, or medical, accounting
+                        or financial information relating to that person.</small>
+                    </li>
+                    <li>
+                        <b>sensitive data</b><small>A personal data requiring special precautions on account of its nature. A sensitive data is any data that can disclose a person's racial origin or
+                        ethnicity, religious or other beliefs, political opinions, membership of parties, trade unions and/or associations, health, or sex life.</small>
+                    </li>
+                    <li>
+                        <b>Data Subject's Rights</b><small>Under Italy's Personal Data Protection Code, every Data
+                        Subject has various rights in connection with the processing of their personal data (see Section 7) [...]</small>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>my thesis</h2>
+                <p>
+                    <b>
+                        Current data protection approach is outdated, and is focused on <i>
+                            personal
+                        </i>
+                        rights, when we have to address <i>
+                            society
+                        </i>
+                        rights.
+                    </b>
+                </p>
+                <h4>Theoretical issue:</h4>
+                <p>These are anonymous data, apparently they have no meaning</p>
+            </section>
+
+            <section data-background="../images/CoupleOfClicks.png" data-background-transition="zoom"></section>
+
+
+        </section>
+
+        <section>
+            <h2>Which data third party had?</h2>
+            <ul>
+                <li><b>Cookie</b>: The simplest one</li>
+                <li><b>Browser identifier technologies</b>: <a href="https://panopticlick.eff.org/">Panoptclick</a> + <a href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/client-identification-mechanisms">Client Identification Mechanism</a>.</li>
+                <li><b>Content of the page you are reading</b>: specially if the service is also a web crawler, or behind the scene, has some agreement with one of them.</li>
+                <li><b>Geographical location</b>: based on the IP address associated.</li>
+                <li><b>Your source</b>: In certain associated (<a href="http://motherboard.vice.com/read/looking-up-symptoms-online-these-companies-are-collecting-your-data">VICE on tracking</a> + <a href="http://motherboard.vice.com/read/your-porn-is-watching-you">VICE on porn</a>).</li>
+                <li><b>Your profile</b>: only if has the profile (<a href="motherboard.vice.com/read/facebook-admits-to-tracking-people-who-dont-use-facebook-blames-a-bug">Facebook ?</a>), or if cooperate with someone collecting profile and reselling them.</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h2>Concerns</h2>
+                <p>The single person can be pretty meaningless in the big picture..</p>
+                <p><b>Numbers</b> talks</p>
+                <p>and <i>medatada</i> are more truthful than disclosed data</p>
+            </section>
+
+            <section>
+                <h4>A very limited list of research</h4>
+                https://www.sciencenews.org/article/facebook-%E2%80%98likes%E2%80%99-can-reveal-users%E2%80%99-politics-sexual-orientation-iq
+                <ul>
+                    <li>
+                        Bruce Schneier <a href="http://archive.wired.com/politics/security/commentary/securitymatters/2007/12/securitymatters_1213">Why Anonymous data sometime isn't</a>.
+                    </li>
+                    <li>
+                        <a href="http://www.public.asu.edu/~huanliu/papers/IS10.pdf">Toward Collective Behavior Prediction via Social Dimension Extraction</a>
+                    </li>
+                    <li>
+                        <a href="http://ir.ii.uam.es/smuc2011/res/papers/smuc2011_paper04.pdf">Predicting Age and Gender in Online Social Networks</a>
+                    </li>
+                    <li>
+                        <a href="http://paul-hadrien.info/backup/LSE/IS%20414/facebook%20literature/web%20page%20clustering%20and%20user%20navigation.pdf">
+                            Web page clustering using a self-organizing map of user navigation patterns
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://research.microsoft.com/pubs/158372/fp0518.pdf">
+                            Modeling and Predicting Behavioral Dynamics on the Web
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.researchgate.net/profile/Juan_Velasquez10/publication/4133606_Mining_Web_data_to_create_online_navigation_recommendations/links/0046352e02bdadb61f000000.pdf">
+                            Mining web data to create online navigation recommendations
+                        </a>
+                    </li>
+                </ul>
+                <small><a href="http://www.washingtonpost.com/news/the-intersect/wp/2014/07/01/9-answers-about-facebooks-creepy-emotional-manipulation-experiment/">Facebook on emotion manipulation</a>.</small>
+            </section>
+        </section>
+
+        <section>
+
+            <section>
+                <h2>
+                    Why did we develop Trackography?
+                </h2>
+                <p>Due to the abstract nature of the tracking, surveillance and profiling: is essential provide numbers and data to non technical audience.</p>
+            </section>
+
+            <section>
+                <h2>In details, we aim to</h2>
+                <ul>
+                    <li>Make transpanrecy in the online tracking business, because it is pretty opaque</li>
+                    <li>Increare safety for users (<i>in this case, more for societies</i>) enlightened by Snowden revelations</li>
+                    <li>We do not control the profiles created about us by online tracking companies - which can lead to abuse</li>
+                    <li>This is a resource for research, advocacy and transparency</li>
+                    <li>Making every data accessible (API) and test replicable (look on github - <a href="https://github.com/vecna/trackmap">our repository</a>).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>The analysis subject</h2>
+                <p>Different kind of subject means different interpretation of the results</p>
+                <ul>
+                    <li><b>Health care, online clinics</b>: very sensitive, more in place where insurance is private.</li>
+                    <li><b>Public sector</b>: relationship between citizen and state "sold" or "leaked" to foreign.</li>
+                    <li><b>Media</b>: the interest expressed by reader reflect the general interest of the population.</li>
+                </ul>
+                <p>We are dedicated on the last!</p>
+            </section>
+
+        </section>
+
+
+        <section>
+         <h2>Why are we focusing on media websites? </h2>
+         <ul>
+            <li>One of the most common things we do is read the news online</li>
+            <li>The business model of the media is largely dependent on advertising</li>
+            <li>The type of news we read show more about us in the long-term than what we think</li>
+            <li>A Facebook experiment shows that what we read influences our behaviour</li>
+          </ul>
+        </section>
+
+
+        <section>
+            <h3>
+                Developing a Script to Track the Trackers
+            </h3>
+            <p>
+                Our script is designed to:
+            </p>
+            <ul>
+                <li>
+                    Emulate a browser that connect to a media website
+                </li>
+                <li>
+                    Records all the third party URLs included automatically from the media.
+                </li>
+                <li>
+                    Perform a traceroute for every URL included in the media websites under analysis
+                </li>
+                <li>
+                    Identify the countries which host the network infrastructure and perform a GeoIP conversion of all the included IP addresses in the network path
+                </li>
+            </ul> <br>
+        <small>But the script does NOT work in conjunction with your browser - it just performs a connection to the media and sends us the results</small>
+        </section>
+
+
+        <section>
+            <h2>The Map</h2>
+            <ul>
+                <li> The blue countries host the servers of the websites you have selected</li>
+                <li> The purple countries host the network infrastructure required to access the websites you have selected</li>
+                <li> The red countries host the servers of the companies that track you when you access the websites you have selected</li>
+            </ul>
+            <p>As for the arcs?</p>
+            <ul>
+                <li> The blue arcs show your connection to the websites you have selected</li>
+                <li>...while the red arcs show your connection to tracking companies</li>
+            </ul>
+          <a target="_blank" href="https://trackography.org">check the map!</a>.
+        </section>
+
+
+        <section>
+            <h2>User Vulnerability: Network Topology</h2>
+            <ul>
+                <li>When we access websites, our connections travel through the network infrastructure of foreign states</li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they have access to the HTTP referer, cookies, and other identifiable information</li>
+                <li>When unencrypted connections pass though the network infrastructure of ISPs, they can redirect traffic to malicious servers</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Did you remember ?</h2>
+            <p>
+                <img src="../images/Angry-Birds-NSA-edition.jpg" height="500px">
+            </p>
+            <small>
+                <a href="http://www.sfgate.com/technology/article/Leaked-docs-NSA-uses-Candy-Crush-Angry-5186801.php">January 2014 revelation about</a>.
+            </small>
+        </section>
+
+        <section>
+            <h2>China greatcannon ?</h2>
+            <p>
+                <img src="../images/GreatCannon.png" height="400px">
+            </p>
+            <p>Is the same concept of <a href="http://www.wired.com/2014/03/quantum/">NSA QUANTUM</a>.</p>
+            <small>
+                And associated propaganda:
+                <a href="http://uk.businessinsider.com/wall-street-journal-snowden-and-chinas-great-cannon-2015-4">
+                    The Wall Street Journal suggests Snowden gave China an incredibly powerful cyberweapon
+                </a>.
+            </small>
+        </section>
+
+        <section>
+            <h4>or FoxAcid ?</h4>
+            <img src="../images/FoxAcid.png" width="600"/>
+            <h4>Or FinFly ISP?</h4>
+            <p>They are based on the <b>interception of HTTP connections</b> which are redirected to other servers and subsequently injected with a browser exploit or tampered with a download on-the-fly</p>
+        </section>
+
+        <section>
+            <h2>Tapping fibre-optic cables</h2>
+            <img src="../images/partner-eyes.png" width="680" />
+            <small>
+                And check Ingrid Burrington <a target="_blank" href="http://lifewinning.com/submarine-cable-taps/">interactive map!</a>
+            </small>
+        </section>
+
+        <section>
+            <h2>Geopolitics of data</h2>
+            <p>
+                <a target="_blank" href="https://trackography.org/perc.html">
+                    Percentage of exposure per country
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                User Profiling
+            </h2>
+            <p>When we access webpages, third parties track us and create profiles about us - which may or may not be accurate</p>
+            <p>
+                <a target="_blank" href="https://trackography.org/rich.html">Company presence percentage</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Google ?</h2>
+            <ul>
+                <li>April 2015 <a href="http://europa.eu/rapid/press-release_IP-15-4780_en.htm">Statement of Objections</a>.</li>
+                <li>From Italian Data Protection Authority: <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3740585">
+                    Google to comply with the privacy measures set for th by the Italian DPA</a>.
+                </li>
+            </ul>
+        </section>
+
+        <section class="left">
+            <h2>
+                Trackers' Business Model
+            </h2>
+            <p>
+                Third party trackers (a.k.a tracking companies) engage in (one or more of) the following:
+            </p>
+            <ul>
+                <li>Advertising</li>
+                <li>Profiling </li>
+                <li>Market Research </li>
+                <li>Web Analytics </li>
+                <li>Web Crawling </li>
+            </ul>
+            <p>"Our policy is to tell people about government requests for their data, except in limited cases, like when we are gagged by a court order, which sadly happens quite frequently" - <a target="_blank" href="http://www.theguardian.com/technology/2015/jan/26/wikileaks-threatens-legal-action-google-us-government">Google spokesperson</a></p>
+        </section>
+
+
+        <section>
+
+            <section>
+                <h2>But how do the Trackers handle our data?</h2>
+                <p>
+                    We collected the following fields of data from the privacy policies of some of the globally prevailing tracking companies:
+                </p>
+
+                <ul>
+                    <li>
+                        The types of data they collect
+                    </li>
+                    <li>
+                        Whether they provide safeguards to prevent the full identification of users' IP addresses
+                    </li>
+                    <li>
+                        Whether users can opt-out from their tracking
+                    </li>
+                    <li>
+                        Whether they support Do Not Track (DNT)
+                    </li>
+                    <li>
+                        The types of tracking technologies they use
+                    </li>
+                    <li>
+                        Whether they comply with the US – EU Safe Harbour Framework
+                    </li>
+                    <li>
+                        Whether they are TRUSTe certified
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h2>Opt-Out ?</h2>
+                <p>
+                    Largely conditional because in some cases:
+                </p>
+                <ul>
+                    <li>
+                        Users can only opt-out if their browser is not configured to block third party cookies
+                    </li>
+                    <li>
+                        Users can only opt-out by cancelling their account with a service
+                    </li>
+                    <li>
+                        Users need to opt-out from every device that they use
+                    </li>
+                    <li>
+                        Users can only opt-out from the browser that they are using
+                    </li>
+                    <li>
+                        If users opt-out they will have restricted access to content, features and services
+                    </li>
+                    <li>
+                        ...and lets not forget the various default online tracking settings browsers have...
+                    </li>
+                </ul>
+
+            </section>
+
+        </section>
+
+        <section>
+            <p>
+                Trackography API
+            </p>
+            <img src="../images/APIflow.png" />
+            <p>
+                <a target="_blank" href="https://github.com/vecna/trackmap/blob/master/RESTfulAPI.md">RESTful documentation</a>,
+            <a target="_blank" href="https://github.com/vecna/trackmap/blob/master/csv/companies.csv">Privacy Policy in CSV @github</a>
+            </p>
+        </section>
+
+
+        <section>
+            <h4>How can we block and circumvent online tracking?</h4>
+
+            <table border="2" cellpadding="1" cellspacing="1" id="solutiontable">
+                <tbody>
+                <tr>
+                    <td>Types of tools</td>
+                    <td>Tools for Firefox</td>
+                    <td>Tools for Chrome</td>
+                </tr>
+                <tr>
+                    <td>Blocks third party trackers</td>
+                    <td><a target="_blank" href="https://www.eff.org/privacybadger">Privacy Badger</a>, <a target="_blank" href="https://adblockplus.org/">AdBlock Plus</a>,<a target="_blank" href="https://www.ghostery.com/en/"> Ghostery</a> and <a target="_blank" href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a target="_blank" href="https://adblockplus.org/">Adblock Plus</a>, <a target="_blank" href="https://www.ghostery.com/en/">Ghostery</a> and <a target="_blank" href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks third party scripts</td>
+                    <td><a target="_blank" href="https://noscript.net/">NoScript</a></td>
+                    <td><a target="_blank" href="https://code.google.com/p/scriptno/">ScriptNo</a></td>
+                </tr>
+                <tr>
+                    <td>Blocks cross-site tracking</td>
+                    <td><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/">RequestPolicy</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/priv8/">Priv8</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sets opt-out cookies</td>
+                    <td><a target="_blank" href="https://jmhobbs.github.io/beef-taco/">Beef Taco</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Clears your browsing history</td>
+                    <td><a target="_blank" href="https://addons.mozilla.org/en-us/firefox/addon/clickclean/">Click&amp;Clean</a></td>
+                    <td><a target="_blank" href="http://www.hotcleaner.com/clickclean_chrome.html">Click&amp;Clean</a></td>
+                </tr>
+                <tr>
+                    <td>Visualises third party trackers</td>
+                    <td><a target="_blank" href="https://www.ghostery.com/en/">Ghostery</a> and <a target="_blank" href="https://disconnect.me/">Disconnect</a></td>
+                    <td><a target="_blank" href="https://www.ghostery.com/en/">Ghostery</a> and <a target="_blank" href="https://disconnect.me/">Disconnect</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+<h2>Help us Track the Trackers</h2>
+<p><b>
+Is your country missing from Trackography?
+</b></p>
+<p>
+Contribute by helping us create or review your country's <a target="_blank" href="https://github.com/vecna/trackmap/tree/master/verified_media">media list</a> and please <i>pull request</i>.
+</p>
+<p><b>
+When the media list is ready, run the data collection script
+</b></p>
+                <pre>
+wget https://github.com/vecna/trackmap/blob/master/setup.sh && sh ./setup.sh
+cd trackmap
+./perform_analysis.py -c NAME_OF_YOUR_COUNTRY
+                </pre>
+
+        </section>
+
+
+        <section>
+            <h1>
+                Thanks! Questions?
+            </h1>
+            <pre>
+pub   3200R/0x94E7EF47 2014-08-05 [expires: 2015-08-30]
+      Key fingerprint = ABC2 7639 5EE3 3245 A0A1  3973 40E2 6C25 94E7 EF47
+uid                    TrackMap project &lt;trackmap@tacticaltech.org&gt;
+sub   3200R/0x504DEBDF 2014-08-05 [expires: 2015-08-30]
+            </pre>
+              <p>Trackography twitter <a target="_blank" href="https://twitter.com/trackography_">@trackography_</a>
+            </p>
+            <p>
+             Access Trackography through Tactical Tech's <a target="_blank" href="https://myshadow.org/trackography"> Me & My Shadow </a>
+            </p>
+
+        </section>
+    </div>
+</div>
+
+<script src="../nm/reveal.js/lib/js/head.min.js"></script>
+<script src="../nm/reveal.js/js/reveal.min.js"></script>
+
+<script>
+    // Required, even if empty.
+    Reveal.initialize({
+    });
+</script>
+</body>
+</html>
+
