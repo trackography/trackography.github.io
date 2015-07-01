@@ -2,24 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>#IJF15 - project Trackography</title>
+    <title>E-Privacy 2015 - Trackography</title>
     <link rel="stylesheet" href="../nm/reveal.js/css/reveal.min.css">
     <link rel="stylesheet" href="../nm/reveal.js/css/theme/default.css" id="theme">
 
     <style>
-        .authors {
-            width: 50%;
-            float: left;
-            align-content: center;
-        }
         .authorscointainer {
             border: solid 2px wheat;
             clear: both;
             padding: 3px;
-        }
-        #solutiontable {
-            font-size: 0.6em;
-            font-family: Consolas, courier;
         }
         .left {
             text-align: left;
@@ -50,7 +41,7 @@
                 <br>
             </div>
             <div class="authorscointainer">
-                <p>E-Privacy, Rome, 2 Luglio 2015</p>
+                <p>E-Privacy, Roma, 2 Luglio 2015</p>
             </div>
             <br>
         </section>
@@ -68,11 +59,20 @@
                 <ul>
                     <li>Quando navighi su un sito, solo chi è strettamente necessario alla tua navigazione, è a conoscenza della tua attività</li>
                     <li><b>C'è chi è disposto a pagare per essere presente</b>.
-                    <li>Ci sono due tipi di guadagno: uno deriva dal comprare non solo la presenza, ma un piccolo spazio (advertising),
-                            l'altro deriva dallo studiare trend e correlare dati provenienti da diverse sorgenti.</li>
                 </ul>
-                <br>
-                <p>Il primo da un guadagno proprozionale alla presenza, il secondo favorisce le posizioni dominanti nel mercato.</p>
+            </section>
+
+            <section class="left">
+                <h2>Benefici?</h2>
+                <ol>
+                    <li>Comprare non solo la presenza, ma un piccolo spazio (advertising) ed essere intermediari</li>
+                    <li>Studiare trend e correlare dati provenienti da diverse sorgenti.</li>
+                </ol>
+                <h3>Scalabilità</h3>
+                <ol>
+                    <li>Proporzionale alla presenza.</li>
+                    <li>"fattoriale", e favorisce posizioni dominanti nel mercato.</li>
+                </ol>
             </section>
 
             <section>
@@ -80,6 +80,12 @@
             </section>
 
             <section data-background="../images/CorriereAdvAndNot.png">
+            </section>
+
+            <section>
+                <h2>Performance</h2>
+                <p><a href="http://ieee-security.org/TC/SPW2015/W2SP/papers/W2SP_2015_submission_32.pdf">Tracking Protection in Firefox For Privacy and Performance</a></p>
+                <p>Per gli utenti è un costo di <a href="http://stevesouders.com/p3pc/">tempo e banda</a>, oltre a quello umano, che non è (ancora ?) misurabile.</p>
             </section>
 
             <section>
@@ -94,6 +100,40 @@
             </section>
 
             <section>
+                <h2>FAQ N.1: Non sono OTT</h2>
+                <p>Spesso si confonde questo fenomeno di tracciamento con l'avere un profilo Google, Facebook, etc.</p>
+                <hr>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>OTT</th>
+                        <th>Trackers</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Accetti un ToS *</td>
+                        <td>Non c'è accordo = non ti devono nulla</td>
+                    </tr><tr>
+                    </tr><tr>
+                        <td><a href="https://tosdr.org/">ToS;DR</a></td>
+                        <td><a href="https://rankingdigitalrights.org/">Ranking Digital Rights</a>**</td>
+                    </tr><tr>
+                    </tr><tr>
+                        <td>Dati personali monitorati <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3740038">(G + AGDP)</a></td>
+                        <td>Nessuna cessione di dati personali: ma algoritmi che li generano</td>
+                    </tr><tr>
+                    </tr></tbody>
+                </table>
+                <p class="left">
+                    <br>
+                    <small>*: per quanto unilaterale, mai letto e non discutibile</small>
+                    <br>
+                    <small>**: ma si affidano a survey fatti alle compagnie</small>
+                </p>
+            </section>
+
+            <section class="left">
                 <h2>Approfondimenti</h2>
                 <ul>
                     <li>
@@ -126,7 +166,8 @@
 
         <section>
             <section class="left">
-                <h2>Metodologia</h2>
+                <h2>L'analisi</h2>
+                <p>Metodologia e motivazioni</p>
                 <ul>
                     <li>Si emula il comportamento di un browser</li>
                     <li>Per ogni connessione al di fuori di quella intesa, si analizza dove termina, se c'è una compania specifica</li>
@@ -174,9 +215,9 @@
             <p>Se consideriamo:</p>
             <ul>
                 <li>I lettori italiani come una comunità</li>
-                <li>E questa comunità viene indebolita se, qualcuno di esterno, li può conoscere senza far parte della loro rete</li>
+                <li>Una comunità viene indebolita se, qualcuno di esterno, li può conoscere senza far parte della loro rete</li>
             </ul>
-            <p>Possiamo misurare l'impatto dei media ?</p>
+            <p>Possiamo misurare l'indebolimento sociale che porta ogni media ?</p>
             <p>Ho moltiplicato i dati raccolti con l'ultimo test, con il rapporto di AGCOM sull'utilizzo degli online news media</p>
         </section>
 
@@ -190,8 +231,14 @@
         <section class="left">
             <h2>Nota</h2>
             <br>
-            <p>Non si parla di cookie. Si parla di <b>Terze parti presenti</b>, le implicazioni sono diverse.</p>
-            <p>La mia analisi non tiene conto dei cookie (non perchè non si possa fare, ma perché mi dedicherò a capire cosa fanno gli agenti traccianti, che possono essere efficaci anche senza cookies)</p>
+            <ul>
+                <li>
+                    Non si parla di cookie. Si parla di <b>Terze parti presenti</b>. Le ragioni per avere una terza parte inclusa sono maggiori di quelle che giustificano un cookie.
+                </li>
+                <li>
+                    La mia analisi non tiene conto dei cookie. [ Lo potrebbe fare, ma ritengo più lungimirante dedicarsi a capire cosa fanno le terze parti, indipendentemente dal motivo per cui sono incluse o da quello che dichiarano ]
+                </li>
+            </ul>
         </section>
         <section data-background="../images/TGcom24-dopo-CL.png" data-background-size="1200px"> </section>
 
@@ -204,14 +251,13 @@
 
 
         <section class="left">
-            <h2>Perchè preoccuparsi</h2>
+            <h2>Perchè difendersi ?</h2>
             <br>
             <ul>
-                <li>Per se stessi: </li>
-                <li>Per la società di cui si è parte</li>
+                <li>Per se stessi: Avere società che non rispondono al tuo codice legale, in grado di generare dati personali con alta attendibilità, quando ogni trend di attacco informatico o di promozione ideologica verte sulla scelta oculata dei target, è un rischio asimmetrico.</li>
+                <li>Per la società di cui si è parte: se la nostra dieta digitale o la nostra autodifesa tutela noi stessi, siamo comunque una minoranza all'interno di una società indebolita.</li>
             </ul>
         </section>
-
 
         <section>
             <section class="left">
