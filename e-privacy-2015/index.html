@@ -54,16 +54,22 @@
 
         <section>
 
+            <section data-background="../images/CorriereAdvAndNot.png">
+            </section>
+
             <section class="left">
                 <h2>Terze parti</h2>
+                <p>Contenuti primari come notizie e video, secondari come pubblicità, o invisibili, vengono essere trasmessi da sorgenti diverse.
+                    La pagina si compone di queste fonti, che possono cambiare durante la navigazione.
+                    Ad ogni connessione, poche informazioni vanno per ragioni tecnologiche ai server delle terze parti.</p>
                 <ul>
-                    <li>Quando navighi su un sito, solo chi è strettamente necessario alla tua navigazione, è a conoscenza della tua attività</li>
+                    <li>Il sito contattato indica una pagina che definisce le sorgenti esterne: è chi contatti che ha la responsabilità.</li>
                     <li><b>C'è chi è disposto a pagare per essere presente</b>.
                 </ul>
             </section>
 
             <section class="left">
-                <h2>Benefici?</h2>
+                <h2>Perché lo fanno ?</h2>
                 <ol>
                     <li>Comprare non solo la presenza, ma un piccolo spazio (advertising) ed essere intermediari</li>
                     <li>Studiare trend e correlare dati provenienti da diverse sorgenti.</li>
@@ -76,19 +82,6 @@
             </section>
 
             <section>
-                <h2>Cosa percepiamo ?</h2>
-            </section>
-
-            <section data-background="../images/CorriereAdvAndNot.png">
-            </section>
-
-            <section>
-                <h2>Performance</h2>
-                <p><a href="http://ieee-security.org/TC/SPW2015/W2SP/papers/W2SP_2015_submission_32.pdf">Tracking Protection in Firefox For Privacy and Performance</a></p>
-                <p>Per gli utenti è un costo di <a href="http://stevesouders.com/p3pc/">tempo e banda</a>, oltre a quello umano, che non è (ancora ?) misurabile.</p>
-            </section>
-
-            <section>
                 <h4>Implicazioni</h4>
                 <ul>
                     <li>Compagnie di cui non hai mai sentito parlare, sono parte della tua navigazione</li>
@@ -97,40 +90,6 @@
                     <li>Media (or altri fornitori di contenuti) <b>sono incentivati a farlo</b>, perchè questo porta loro incassi o altri benefici (interazione con i social, statistiche, efficenza)</li>
                 </ul>
                 <img src="../images/manylinks.png">
-            </section>
-
-            <section>
-                <h2>FAQ N.1: Non sono OTT</h2>
-                <p>Spesso si confonde questo fenomeno di tracciamento con l'avere un profilo Google, Facebook, etc.</p>
-                <hr>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>OTT</th>
-                        <th>Trackers</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Accetti un ToS *</td>
-                        <td>Non c'è accordo = non ti devono nulla</td>
-                    </tr><tr>
-                    </tr><tr>
-                        <td><a href="https://tosdr.org/">ToS;DR</a></td>
-                        <td><a href="https://rankingdigitalrights.org/">Ranking Digital Rights</a>**</td>
-                    </tr><tr>
-                    </tr><tr>
-                        <td>Dati personali monitorati <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3740038">(G + AGDP)</a></td>
-                        <td>Nessuna cessione di dati personali: ma algoritmi che li generano</td>
-                    </tr><tr>
-                    </tr></tbody>
-                </table>
-                <p class="left">
-                    <br>
-                    <small>*: per quanto unilaterale, mai letto e non discutibile</small>
-                    <br>
-                    <small>**: ma si affidano a survey fatti alle compagnie</small>
-                </p>
             </section>
 
             <section class="left">
@@ -166,15 +125,17 @@
 
         <section>
             <section class="left">
-                <h2>L'analisi</h2>
-                <p>Metodologia e motivazioni</p>
+                <h2>Metodologia</h2>
                 <ul>
-                    <li>Si emula il comportamento di un browser</li>
-                    <li>Per ogni connessione al di fuori di quella intesa, si analizza dove termina, se c'è una compania specifica</li>
+                    <li>Si emula il comportamento di un browser verso un gruppo di siti (scelti + nazione scelta)</li>
+                    <li>Per ogni connessione al di fuori di quella intesa, si analizza dove termina, se c'è una compagnia riconosciuta (quando vedi youtube.com incluso, associare il nome "Google")</li>
                     <li>Per ogni connessione al di fuori di quella intesa, si mappano gli Internet Service Provider che ci permettono di raggiungere la risorsa</li>
-                    <li><b>Dovrei, ma non lo fa ancora</b> accettare la cookie policy e comparare cosa succede dopo</li>
-                    <li><b>Se una terza parte è presente prima del conseno</b>, anche se non sta inviando un cookie, il tracciamento è inizato.</li>
+                    <li>In teoria il consenso dovrebbe far avviare le connessioni alle terze parti dopo l'accettazione. Ma ci possono essere ragioni tecniche per permetterlo.
+                        <b>Se una terza parte viene inclusa prima che il consenso venga espresso</b>, anche se non sta inviando un cookie, il tracciamento può avere inizio.</li>
                 </ul>
+                <small>
+                    <b>Da farsi:</b> accettare la cookie policy e comparare cosa viene incluso in quel secondo momento (o agli accessi successivi)
+                </small>
             </section>
 
             <section>
@@ -184,13 +145,13 @@
         </section>
 
         <section class="left">
-            <img src="../images/lightbeam.png" />
-            <p>
-                Esistono già altri tool, che supportano l'utente durante la navigazione.
-            </p>
+            <small>
+                <img src="../images/lightbeam.png" />
+                <img src="../images/disconnect.me.png" />
+            </small>
             <small>
                 Provateli: <a href="https://addons.mozilla.org/en-US/firefox/addon/lightbeam/">Lightbeam</a>,
-                <a target="_blank" href="https://disconnect.me/">Disconnect</a>. ed il famoso ADBlock+
+                    <a target="_blank" href="https://disconnect.me/">Disconnect</a>.
             </small>
             <p>
                 Ma lo scopo di questo progetto è poter fare analisi di trend, comparazioni tra agenti traccianti e fare analisi delle infrastrutture.
@@ -198,14 +159,22 @@
         </section>
 
         <section>
-            <h3>Alcuni dati</h3>
-            <small>Alcune immagini sono scelte senza criterio scientifico, solo a scopo dimostrativo. Saranno spiegate vocalmente.</small>
+            <img src="../images/extraNoNews.jpg" />
+            <p>DISCLAIMER</p>
+            <p>Le immagini segenti potrebbero urtare la vostra sensibilità più del dovuto. Il loro scopo è mostrare il tipo di analisi che si può realizzare, non
+                riportare un contenuto che compari, effettivamente, i news media online.</p>.
+            <small>L'analisi di oggi, porta a moltiplicare i dati di AGCOM tratti da <a href="http://www.agcom.it/documents/10179/1677802/Allegato+22-4-2015/69ae8f63-2301-46fd-a20b-f255546c5c42?version=1.0">L'indagine sull’informazione e internet in Italia</a>, ma non è stabile come metodologia, ed i suoi risultati non sono a carattere scientifico: NON VANNO USATE COME NEWS E NON ESPRIMONO GIUDIZI SUI MEDIA</small>
         </section>
+
+        <section>
+            <h2>L'analisi di oggi, porta a moltiplicare i dati di AGCOM tratti da <a href="http://www.agcom.it/documents/10179/1677802/Allegato+22-4-2015/69ae8f63-2301-46fd-a20b-f255546c5c42?version=1.0">L'indagine sull’informazione e internet in Italia</a>, ma non è stabile come metodologia, ed i suoi risultati non sono a carattere scientifico: NON VANNO USATE COME NEWS E NON ESPRIMONO GIUDIZI SUI MEDIA</h2>
+        </section>
+
         <section data-background="../images/VariMedia.png" data-background-size="1500px"> </section>
 
         <section>
             <small>Le differenze</small>
-            <h2>Prima e dopo il favore istituzionale che è stato fatto alle companie di tracking</h2>
+            <h2>Prima e dopo il favore istituzionale che è stato fatto alle compagnie di tracking</h2>
             <small>c.d. "cookie law"</small>
         </section>
         <section data-background="../images/Top10CountryCompaniesItaly.png" data-background-size="1500px"> </section>
@@ -303,7 +272,7 @@
         </section>
 
         <section>
-            <h2>Ukraina, ad esempio</h2>
+            <h2>Ukraina</h2>
             <img src="../images/UkraineItaly88.png" />
             <small>Test effettuati da due provider differenti, danno risultati differenti</small>
             <img src="../images/UkraineItaly72.png" />
@@ -413,7 +382,6 @@
             <img src="../images/IwantYOU.png" />
         </section>
 
-
         <section>
             <h4>
                 Grazie dell'attenzione!
@@ -434,6 +402,47 @@ sub   3200R/0x504DEBDF 2014-08-05 [expires: 2015-08-30]
             </p>
 
         </section>
+
+        <section>
+            <h2>FAQ N.1: Non sono OTT</h2>
+            <p>Spesso si confonde questo fenomeno di tracciamento con l'avere un profilo Google, Facebook, etc.</p>
+            <hr>
+            <table>
+                <thead>
+                <tr>
+                    <th>OTT</th>
+                    <th>Trackers</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Accetti un ToS *</td>
+                    <td>Non c'è accordo = non ti devono nulla</td>
+                </tr><tr>
+                </tr><tr>
+                    <td><a href="https://tosdr.org/">ToS;DR</a></td>
+                    <td><a href="https://rankingdigitalrights.org/">Ranking Digital Rights</a>**</td>
+                </tr><tr>
+                </tr><tr>
+                    <td>Dati personali monitorati <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3740038">(G + AGDP)</a></td>
+                    <td>Nessuna cessione di dati personali: ma algoritmi che li generano</td>
+                </tr><tr>
+                </tr></tbody>
+            </table>
+            <p class="left">
+                <br>
+                <small>*: per quanto unilaterale, mai letto e non discutibile</small>
+                <br>
+                <small>**: ma si affidano a survey fatti alle compagnie</small>
+            </p>
+        </section>
+
+        <section>
+            <h2>FAQ N.2: Performance</h2>
+            <p><a href="http://ieee-security.org/TC/SPW2015/W2SP/papers/W2SP_2015_submission_32.pdf">Tracking Protection in Firefox For Privacy and Performance</a></p>
+            <p>Per gli utenti è un costo di <a href="http://stevesouders.com/p3pc/">tempo e banda</a>, oltre a quello umano, che non è (ancora ?) misurabile.</p>
+        </section>
+
     </div>
 </div>
 
